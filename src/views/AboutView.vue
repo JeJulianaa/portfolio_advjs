@@ -4,48 +4,48 @@
 
     <button class="btn-add" @click="firebaseAddSingleItem()">Add Item</button>
     <div>
-      <input type="text" placeholder="Product name" v-model="AddProductData.productName" >
+      <input type="text" placeholder="Project name" v-model="AddProjectData.projectName" >
 
     </div>
     <hr>
 
-    <div v-for="product in products" :key="product">
+    <div v-for="project in projects" :key="project">
       <p>
-        ProductID: {{ product.id  }}
+        ProjectID: {{ project.id  }}
       </p>
       <p>
-        ProductName: {{ product.productName }}
+        ProjectName: {{ project.projectName }}
       </p>
       <p>
-        ProductPrice: {{ product.productPrice }}
+        projectDescription: {{ project.projectDescription }}
       </p>
-      <button class="btn-delete" @click="firebaseDeleteSingleItem(product.id)">Delete item</button>
+      <button class="btn-delete" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
     
       <p>
-        <input type="text" placeholder="New product name" v-model="product.productName" />
+        <input type="text" placeholder="New project name" v-model="project.projectName" />
       </p>
-      <button class="btn-edit" @click="firebaseUpdateSingleItem(product.id)">Edit item</button>
+      <button class="btn-edit" @click="firebaseUpdateSingleItem(project.id)">Edit item</button>
       <hr>
     </div>
   </div>
 </template>
 
 <script setup>
-import useProducts from '../modules/useProducts.js';
+import useProjects from '../modules/useProjects.js';
 import { onMounted } from 'vue'
 
 const { 
-  products, 
-  getProductsData, 
+  projects, 
+  getProjectsData, 
   firebaseDeleteSingleItem, 
   firebaseAddSingleItem ,
-  AddProductData,
+  AddProjectData,
   firebaseUpdateSingleItem,
   //UpdateProductData
-} = useProducts();
+} = useProjects();
 
 onMounted(() => {
-  getProductsData();
+  getProjectsData();
 })
 
 
