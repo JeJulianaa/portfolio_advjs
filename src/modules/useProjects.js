@@ -11,13 +11,25 @@ const useProjects = () => {
   const AddProjectData = ref({
     projectName: '',
     projectDescription: '',
-    projectDate:''
+    projectDate:'',
+    githubLink:'',
+    onedriveLink:'',
+    youtubeLink:'',
+    projectTeam:'',
+    projectTech:'',
+    projectCategory:["webDesign","UI/UX"] // array to store multiple categories
   })
 
   const UpdateProjectData = ref({
     projectName: '',
     projectDescription: '',
-    projectDate:''
+    projectDate:'',
+    githubLink:'',
+    onedriveLink:'',
+    youtubeLink:'',
+    projectTeam:'',
+    projectTech:'',
+    projectCategory:["webDesign","UI/UX"]  // array to store multiple categories
   })
 
   const getProjectsData = () => {
@@ -43,7 +55,14 @@ const useProjects = () => {
     await addDoc(collection(db, 'projects'), {
       projectName: AddProjectData.value.projectName,
       projectDescription: AddProjectData.value.projectDescription,
-      projectDate: AddProjectData.value.projectDate
+      projectDate: AddProjectData.value.projectDate,
+      githubLink: AddProjectData.value.githubLink,
+      onedriveLink: AddProjectData.value.onedriveLink,
+      youtubeLink: AddProjectData.value.youtubeLink,
+      projectTeam: AddProjectData.value.projectTeam,
+      projectTech: AddProjectData.value.projectTech,
+      projectCategory: AddProjectData.value.projectCategory,
+      
     });
     console.log('Item is added');
   }
@@ -53,6 +72,13 @@ const useProjects = () => {
         projectName: projects.value.find(project => project.id === project.id).projectName, 
         projectDescription: projects.value.find(project => project.id === project.id).projectDescription,
         projectDate: projects.value.find(project => project.id === project.id).projectDate,
+        githubLink: projects.value.find(project => project.id === project.id).githubLink,
+        onedriveLink: projects.value.find(project => project.id === project.id).onedriveLink,
+        youtubeLink: projects.value.find(project => project.id === project.id).youtubeLink,
+        projectTeam: projects.value.find(project => project.id === project.id).projectTeam,
+        projectTech: projects.value.find(project => project.id === project.id).projectTech,
+        projectCategory: projects.value.find(project => project.id === project.id).projectCategory,
+
        // productName: UpdateProductData.value.productName, 
        // projectDescription: 200
     }).then(() => {

@@ -14,7 +14,7 @@
         ProjectID: {{ project.id  }}
       </p>
      
-
+      <!-----different field to project (look at the names to se what it is)------->
       <p>
         ProjectName: {{ project.projectName }}
       </p>
@@ -28,13 +28,61 @@
       <p>
         <input type="text" placeholder="project description" v-model="project.projectDescription" />
       </p>
+
+      <p>
+        projectTeam: {{ project.projectTeam }}
+      </p>
+      <p>
+        <input type="text" placeholder="project Team" v-model="project.projectTeam" />
+      </p>
+
+      <p>
+        projectCategory: {{ project.projectCategory }}
+      </p>
+    
+      <p>
+          <label for="webDesign">Web Design</label>
+          <input type="checkbox" id="webDesign" value="WebDesign" v-model="project.projectCategory">
+          <!-- Add more options as needed -->
+      </p>
+      <p>
+        <label for="UI/UX">UI/UX</label>
+          <input type="checkbox" id="UI/UX" value="UI/UX" v-model="project.projectCategory">
+      </p>
+      
+
+
+      <!----------------project date (type=date)------------->
       <p>
         projectDate: {{ project.projectDate }}
       </p>
       <p>
         <input type="date" placeholder="project date" v-model="project.projectDate" />
       </p>
-    
+
+
+      <!-------------------------links------------------------->
+      <p>
+        onedrive link: {{ project.onedriveLink }}
+      </p>
+      <p>
+        <input type="url" placeholder="link to onedrive" v-model="project.onedriveLink" />
+      </p>
+      <p>
+        Github link: {{ project.githubLink }}
+      </p>
+      <p>
+        <input type="url" placeholder="link to github" v-model="project.githubLink" />
+      </p>
+      <p>
+        youtube link: {{ project.youtubeLink }}
+      </p>
+      <p>
+        <input type="url" placeholder="link to youtube" v-model="project.youtubeLink" />
+      </p>
+  
+
+      <!------------Item button (edit and delete)-------------->
       
       <button class="btn-edit" @click="firebaseUpdateSingleItem(project.id)">Edit item</button>
       <hr>
