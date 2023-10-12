@@ -10,12 +10,14 @@ const useProjects = () => {
 
   const AddProjectData = ref({
     projectName: '',
-    projectDescription: ''
+    projectDescription: '',
+    projectDate:''
   })
 
   const UpdateProjectData = ref({
     projectName: '',
-    projectDescription: ''
+    projectDescription: '',
+    projectDate:''
   })
 
   const getProjectsData = () => {
@@ -24,7 +26,7 @@ const useProjects = () => {
         return {
           id: doc.id,
           ...doc.data()
-            //projectName: doc.data().projectName,
+          //projectName: doc.data().projectName,
           //productPrice: doc.data().productPrice
         }
       })
@@ -40,7 +42,8 @@ const useProjects = () => {
   const firebaseAddSingleItem = async () => {
     await addDoc(collection(db, 'projects'), {
       projectName: AddProjectData.value.projectName,
-      projectDescription: AddProjectData.value.projectDescription
+      projectDescription: AddProjectData.value.projectDescription,
+      projectDate: AddProjectData.value.projectDate
     });
     console.log('Item is added');
   }
@@ -48,10 +51,13 @@ const useProjects = () => {
   const firebaseUpdateSingleItem = async(project) => { 
     await updateDoc(doc(projectDataRef, project), {
         projectName: projects.value.find(project => project.id === project.id).projectName, 
-     // productName: UpdateProductData.value.productName, 
-     // productPrice: 200
+        projectDescription: projects.value.find(project => project.id === project.id).projectDescription,
+        projectDate: projects.value.find(project => project.id === project.id).projectDate,
+       // productName: UpdateProductData.value.productName, 
+       // projectDescription: 200
     }).then(() => {
      // UpdateProductData.value.productName = ''
+      console.log('updated');
     })
   }
 

@@ -13,19 +13,32 @@
       <p>
         ProjectID: {{ project.id  }}
       </p>
+     
+
       <p>
         ProjectName: {{ project.projectName }}
       </p>
       <p>
-        projectDescription: {{ project.projectDescription }}
-      </p>
-      <button class="btn-delete" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
-    
-      <p>
         <input type="text" placeholder="New project name" v-model="project.projectName" />
       </p>
+
+      <p>
+        projectDescription: {{ project.projectDescription }}
+      </p>
+      <p>
+        <input type="text" placeholder="project description" v-model="project.projectDescription" />
+      </p>
+      <p>
+        projectDate: {{ project.projectDate }}
+      </p>
+      <p>
+        <input type="date" placeholder="project date" v-model="project.projectDate" />
+      </p>
+    
+      
       <button class="btn-edit" @click="firebaseUpdateSingleItem(project.id)">Edit item</button>
       <hr>
+      <button class="btn-delete" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
     </div>
   </div>
 </template>
