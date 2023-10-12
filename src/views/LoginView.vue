@@ -5,7 +5,7 @@
     Password: <input type="password" v-model="password" />
     <p v-if="errMsg"> {{ errMsg }}</p>
     <button @click="logIn">Login</button>
-    <button @click="logOut">Logout</button>
+    <button v-if="userAuthenticated" @click="logOut">Sign Out</button>
   </div>
 </template>
 
