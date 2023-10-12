@@ -5,6 +5,7 @@
     Password: <input type="password" v-model="password" />
     <p v-if="errMsg"> {{ errMsg }}</p>
     <button @click="logIn">Login</button>
+    <button @click="logOut">Logout</button>
   </div>
 </template>
 
@@ -12,6 +13,8 @@
 import { ref } from 'vue'
 import { auth } from '../firebase.js'
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
+
 
 import router from '../router'
 
@@ -44,7 +47,16 @@ let logIn = () => {
     }
   })
 }
-
+let logOut = () => {
+    signOut(auth)
+      .then(() => {
+        router.push('/navguard') // Redirect to the login page or any other appropriate page
+      })
+      .catch((error) => {
+        console.error("Sign Out Error: ", error);
+      })
+  }
+  
 </script>
 
 <style lang="scss" scoped>

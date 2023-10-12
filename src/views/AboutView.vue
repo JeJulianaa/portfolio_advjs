@@ -39,16 +39,18 @@
       <p>
         projectCategory: {{ project.projectCategory }}
       </p>
-    
-      <p>
-          <label for="webDesign">Web Design</label>
-          <input type="checkbox" id="webDesign" value="WebDesign" v-model="project.projectCategory">
-          <!-- Add more options as needed -->
-      </p>
-      <p>
-        <label for="UI/UX">UI/UX</label>
-          <input type="checkbox" id="UI/UX" value="UI/UX" v-model="project.projectCategory">
-      </p>
+      <!--
+        <p>
+            <label for="webDesign">Web Design</label>
+            <input type="checkbox" id="webDesign" value="Web Design" v-model="project.projectCategory">
+             Add more options as needed 
+        </p> -->
+        <!--
+        <p>
+          <label for="UI/UX">UI/UX</label>
+            <input type="checkbox" id="UI/UX" value="UI/ UX" v-model="project.projectCategory">
+        </p>
+      -->
       
 
 

@@ -1,12 +1,14 @@
 import { db } from '../firebase.js'
 
 import { ref } from 'vue'
-import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc } from 'firebase/firestore';
+import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc,} from 'firebase/firestore';
+
 
 const useProjects = () => {
 
   const projects = ref([]); // to store data from firebase
   const projectDataRef = collection(db, 'projects');
+  
 
   const AddProjectData = ref({
     projectName: '',
