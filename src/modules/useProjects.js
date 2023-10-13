@@ -66,7 +66,20 @@ const useProjects = () => {
       projectCategory: AddProjectData.value.projectCategory,
       
     });
+    // Clear the text field after adding the project
+    AddProjectData.value.projectName = ''; // Reset the projectName field
+    // Clear other fields as needed
+    AddProjectData.value.projectDescription = '';
+    AddProjectData.value.projectDate = '';
+    AddProjectData.value.githubLink = '';
+    AddProjectData.value.onedriveLink = '';
+    AddProjectData.value.youtubeLink = '';
+    AddProjectData.value.projectTeam = '';
+    AddProjectData.value.projectTech = '';
+    AddProjectData.value.projectCategory = ["webDesign", "UI/UX"];
     console.log('Item is added');
+
+    
   }
 
   const firebaseUpdateSingleItem = async(project) => { 
