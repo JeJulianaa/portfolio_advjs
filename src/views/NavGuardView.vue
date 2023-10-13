@@ -4,7 +4,7 @@
   </div>
 
   
-  <div class="about">
+  <div class="project-page">
     <h1>This is an about page</h1>
 
     <button class="btn-add" @click="firebaseAddSingleItem()">Add Item</button>
