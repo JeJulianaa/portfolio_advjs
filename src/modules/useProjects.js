@@ -1,7 +1,10 @@
-import { db } from '../firebase.js'
+import { db, storage } from '../firebase.js'
 
 import { ref } from 'vue'
-import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc,} from 'firebase/firestore';
+import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc, } from 'firebase/firestore';
+import { ref as storageRef, uploadBytes,} from 'firebase/storage'; // Import Firebase Storage functions
+
+
 
 
 const useProjects = () => {
@@ -19,7 +22,8 @@ const useProjects = () => {
     youtubeLink:'',
     projectTeam:'',
     projectTech:'',
-    projectCategory:["webDesign","UI/UX"] // array to store multiple categories
+  
+    projectImg:'',
   })
 
   const UpdateProjectData = ref({
@@ -31,7 +35,8 @@ const useProjects = () => {
     youtubeLink:'',
     projectTeam:'',
     projectTech:'',
-    projectCategory:["webDesign","UI/UX"]  // array to store multiple categories
+   
+    projectImg:'',
   })
 
   const getProjectsData = () => {
@@ -42,6 +47,7 @@ const useProjects = () => {
           ...doc.data()
           //projectName: doc.data().projectName,
           //productPrice: doc.data().productPrice
+         
         }
       })
     })
@@ -63,8 +69,11 @@ const useProjects = () => {
       youtubeLink: AddProjectData.value.youtubeLink,
       projectTeam: AddProjectData.value.projectTeam,
       projectTech: AddProjectData.value.projectTech,
-      projectCategory: AddProjectData.value.projectCategory,
       
+      projectImg: AddProjectData.value.projectImg,
+
+     
+
     });
     // Clear the text field after adding the project
     AddProjectData.value.projectName = ''; // Reset the projectName field
@@ -76,7 +85,8 @@ const useProjects = () => {
     AddProjectData.value.youtubeLink = '';
     AddProjectData.value.projectTeam = '';
     AddProjectData.value.projectTech = '';
-    AddProjectData.value.projectCategory = ["webDesign", "UI/UX"];
+   
+    AddProjectData.value.projectImg = '';
     console.log('Item is added');
 
     
@@ -92,7 +102,8 @@ const useProjects = () => {
         youtubeLink: projects.value.find(project => project.id === project.id).youtubeLink,
         projectTeam: projects.value.find(project => project.id === project.id).projectTeam,
         projectTech: projects.value.find(project => project.id === project.id).projectTech,
-        projectCategory: projects.value.find(project => project.id === project.id).projectCategory,
+       
+        projectImg: projects.value.find(project => project.id === project.id).projectImg,
 
        // productName: UpdateProductData.value.productName, 
        // projectDescription: 200
@@ -102,6 +113,9 @@ const useProjects = () => {
     })
   }
 
+  
+
+
   return {
     getProjectsData,
     projects,
@@ -109,7 +123,9 @@ const useProjects = () => {
     firebaseAddSingleItem,
     AddProjectData,
     firebaseUpdateSingleItem,
-    UpdateProjectData
+    UpdateProjectData,
+  
+
   }
  }
 

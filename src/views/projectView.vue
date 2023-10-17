@@ -6,20 +6,39 @@
 
   <div v-for="project in projects" :key="project">
       <!--
-      <p>
-        ProjectID: {{ project.id  }}
-      </p>
-      -->
-      <p>
-        ProjectName: {{ project.projectName }}
-      </p>
+  
+
+   
+      oop through your projects and create links to their respective detail pages -->
+      <div >
+        <button class="button-yellow border-4 rounded-lg">
+          <p>hej</p>
+          <router-link :to="{ name: 'project-detail',  params: { id: project.id  }}">
+            <div class="overflow-hidden rounded-lg">
+              <p>
+                ProjectName: {{ project.projectName }}
+              </p>
+              <p>
+                projectDescription: {{ project.projectDescription }}
+              </p>
+              
+              <p>
+                projectCategory: {{ project.projectCategory }}
+              </p>
+            </div>
+          </router-link>
+        </button>
+      </div>
+  
   </div>
 </template>
 
-
-<script setup>
+<script setup >
 import useProjects from '../modules/useProjects.js';
+import { useRouter } from 'vue-router'; // Import the useRouter function
 import { onMounted } from 'vue'
+
+
 
 const { 
   projects, 
@@ -31,7 +50,19 @@ const {
   //UpdateProductData
 } = useProjects();
 
+const goToProjectDetail = (projectId) => {
+  // Navigate to the project-detail route with the project's ID
+  router.push({ name: 'project-detail', params: { id: projectId } });
+};
+
+
 onMounted(() => {
   getProjectsData();
 })
+
+
+
+
 </script>
+
+

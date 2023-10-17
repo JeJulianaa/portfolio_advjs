@@ -88,20 +88,40 @@
         <input type="url" placeholder="link to youtube" v-model="project.youtubeLink" />
       </p>
   
-
+      <p>
+        projectImg: {{ project.projectImg }}
+      </p>
+      <p>
+        <input type="text" placeholder="link to youtube" v-model="project.projectImg" />
+      </p>
+    
+     
+      
       <!------------Item button (edit and delete)-------------->
       
       <button class="btn-edit" @click="firebaseUpdateSingleItem(project.id)">Edit item</button>
       <hr>
       <button class="btn-delete" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
-    </div>
-  </div>
+
+   </div>
+    
+       
+      
+ </div>
+  
 </template>
 
 <script setup>
-import useProjects from '../modules/useProjects.js';
-import { onMounted } from 'vue'
+import {storage} from '../firebase';
 
+import useProjects from '../modules/useProjects.js';
+import { onMounted} from 'vue';
+
+
+
+
+
+//--------
 const { 
   projects, 
   getProjectsData, 
@@ -109,7 +129,7 @@ const {
   firebaseAddSingleItem ,
   AddProjectData,
   firebaseUpdateSingleItem,
-  //UpdateProductData
+  //UpdateProductData,
 } = useProjects();
 
 onMounted(() => {
@@ -117,6 +137,14 @@ onMounted(() => {
 })
 
 
+
+
+
+
+
+
+
+getProjectsData(); // Fetch project data when the component is mounted
 </script>
 
 <style>

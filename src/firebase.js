@@ -5,6 +5,8 @@ import { getFirestore } from "firebase/firestore"; // <- needed for DB
 
 import { getAuth } from "firebase/auth"; // <- needed for auth (later)
 
+import { getStorage } from "firebase/storage"; // <- firebase storage for img
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,7 +24,13 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+
+
  const auth = getAuth(app); // <- needed for auth (later)
  export { auth }
 
 export const db = getFirestore(app); // <- needed for DB so we can use it in our application components
+
+export const storage = getStorage(app);
+
+

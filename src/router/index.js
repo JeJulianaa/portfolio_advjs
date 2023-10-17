@@ -19,6 +19,13 @@ const router = createRouter({
       component: () => import('../views/projectView.vue')
     },
     {
+      path: '/project-detail/:id',
+      name: 'project-detail',
+      component: () => import('../views/ProjectDetail.vue'),
+      props: true
+    },
+
+    {
       path: '/navguard',
       name: 'navguard',
       component: () => import('../views/NavGuardView.vue'),
@@ -30,7 +37,9 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: () => import('../views/LoginView.vue')
-    }
+    },
+
+
   ]
 })
 
