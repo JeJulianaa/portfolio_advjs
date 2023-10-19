@@ -1,11 +1,11 @@
-<template>
-  <div>
+<template class=" ">
+  <div class="pt-40 ">
     <h1>Login</h1>
     Username: <input type="text" v-model="email" />
     Password: <input type="password" v-model="password" />
     <p v-if="errMsg"> {{ errMsg }}</p>
-    <button @click="logIn">Login</button>
-    <button v-if="userAuthenticated" @click="logOut">Sign Out</button>
+    <button class="login " @click="logIn">Login</button>
+    <button class="logout " v-if="userAuthenticated" @click="logOut">Logout</button>
   </div>
 </template>
 
@@ -59,6 +59,6 @@ let logOut = () => {
   
 </script>
 
-<style lang="scss" scoped>
+<style >
 
 </style>

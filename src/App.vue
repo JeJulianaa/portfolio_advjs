@@ -38,7 +38,7 @@ let logOut = () => {
 </script>
 
 <template>
-  <header>
+  <header class="fixed top-0 left-0  w-auto  bg-gray-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border-gray-100">
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -47,7 +47,7 @@ let logOut = () => {
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/project-page">Projekter</RouterLink>
         <RouterLink v-if="isLoggedIn" to="/navguard">NavGuard</RouterLink>
-        <button @click="logOut" v-if="isLoggedIn">Log Out</button>
+        <button  @click="logOut" v-if="isLoggedIn">Log Out</button>
         <RouterLink v-if="!isLoggedIn" to="/login">Login</RouterLink>
       </nav>
     </div>
@@ -60,6 +60,9 @@ let logOut = () => {
 header {
   line-height: 1.5;
   max-height: 100vh;
+  width: 100%;
+  
+  /*background-color: brown;*/
 }
 
 .logo {
@@ -72,6 +75,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  
 }
 
 nav a.router-link-exact-active {
@@ -86,7 +90,10 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+
 }
+
+
 
 nav a:first-of-type {
   border: 0;
@@ -111,11 +118,12 @@ nav a:first-of-type {
 
   nav {
     text-align: left;
-    margin-left: -1rem;
+    
     font-size: 1rem;
 
     padding: 1rem 0;
     margin-top: 1rem;
   }
+  
 }
 </style>
