@@ -4,7 +4,7 @@
   </div>
 
   
-  <div class="project-page">
+  <div class="project-page mt-24">
     <h1>This is an about page</h1>
 
     <button class="btn-add" @click="firebaseAddSingleItem()">Add Item</button>
@@ -88,12 +88,6 @@
         <input type="url" placeholder="link to youtube" v-model="project.youtubeLink" />
       </p>
   
-      <p>
-        projectImg: {{ project.projectImg }}
-      </p>
-      <p>
-        <input type="text" placeholder="link to youtube" v-model="project.projectImg" />
-      </p>
     
      
       
@@ -112,10 +106,12 @@
 </template>
 
 <script setup>
-import {storage} from '../firebase';
+
 
 import useProjects from '../modules/useProjects.js';
-import { onMounted} from 'vue';
+import { onMounted } from 'vue';
+
+
 
 
 

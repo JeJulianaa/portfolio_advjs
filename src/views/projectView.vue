@@ -4,16 +4,20 @@
   </div>
 
 
-  <div v-for="project in projects" :key="project">
+  <div v-for="project in projects" :key="project.ID">
       <!--
   
 
    
       oop through your projects and create links to their respective detail pages -->
       <div >
-        <button class="button-yellow border-4 rounded-lg">
+        <button class="button-yellow border-4 rounded-lg mt-24">
           <p>hej</p>
-          <router-link :to="{ name: 'project-detail',  params: { id: project.id  }}">
+         
+          <router-link :to="{ name: 'projectdetail',  params: { id: project.id  }}">
+            <button>View project</button>
+          </router-link>
+          <!--<router-link :to="{ name: 'projectdetail',  params: { id: project.id  }}">-->
             <div class="overflow-hidden rounded-lg">
               <p>
                 ProjectName: {{ project.projectName }}
@@ -26,7 +30,7 @@
                 projectCategory: {{ project.projectCategory }}
               </p>
             </div>
-          </router-link>
+      
         </button>
       </div>
   
@@ -35,34 +39,15 @@
 
 <script setup >
 import useProjects from '../modules/useProjects.js';
-import { useRouter } from 'vue-router'; // Import the useRouter function
 import { onMounted } from 'vue'
 
 
-
-const { 
-  projects, 
-  getProjectsData, 
-  firebaseDeleteSingleItem, 
-  firebaseAddSingleItem ,
-  AddProjectData,
-  firebaseUpdateSingleItem,
-  //UpdateProductData
-} = useProjects();
-
-const goToProjectDetail = (projectId) => {
-  // Navigate to the project-detail route with the project's ID
-  router.push({ name: 'project-detail', params: { id: projectId } });
-};
+const { projects, getProjectsData } = useProjects();
 
 
 onMounted(() => {
   getProjectsData();
-})
-
-
+});
 
 
 </script>
-
-

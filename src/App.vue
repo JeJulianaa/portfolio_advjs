@@ -39,7 +39,7 @@ let logOut = () => {
 
 <template>
   <header class="fixed top-0 left-0  w-auto  bg-gray-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border-gray-100">
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="90" height="90" />
 
     <div class="wrapper">
      

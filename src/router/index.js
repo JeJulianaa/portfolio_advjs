@@ -19,10 +19,10 @@ const router = createRouter({
       component: () => import('../views/projectView.vue')
     },
     {
-      path: '/project-detail/:id',
-      name: 'project-detail',
-      component: () => import('../views/ProjectDetail.vue'),
-      props: true
+    path: '/projectdetail/:id',
+    name: 'projectdetail',
+    component: () => import('../views/ProjectDetailView.vue'),
+    props: true, // This allows passing the route params as props
     },
 
     {
