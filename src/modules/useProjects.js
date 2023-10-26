@@ -22,6 +22,7 @@ const useProjects = () => {
     youtubeLink:'',
     projectTeam:'',
     projectTech:'',
+    projectCategory:'',
   
     //projectImg:'',
   })
@@ -35,6 +36,7 @@ const useProjects = () => {
     youtubeLink:'',
     projectTeam:'',
     projectTech:'',
+    projectCategory:'',
    
    // projectImg:'',
   })
@@ -69,11 +71,7 @@ const useProjects = () => {
       youtubeLink: AddProjectData.value.youtubeLink,
       projectTeam: AddProjectData.value.projectTeam,
       projectTech: AddProjectData.value.projectTech,
-      
-    //  projectImg: AddProjectData.value.projectImg,
-
-     
-
+      projectCategory: AddProjectData.value.projectCategory,
     });
   
     console.log('Item is added');
@@ -107,6 +105,7 @@ const useProjects = () => {
       UpdateProjectData.value.githubLink = '';
       UpdateProjectData.value.onedriveLink = '';
       UpdateProjectData.value.youtubeLink = '';
+     
    
     });
   };

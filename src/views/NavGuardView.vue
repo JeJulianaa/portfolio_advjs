@@ -30,8 +30,8 @@
       <p>
         projectDescription: {{ project.projectDescription }}
       </p>
-      <p>
-        <input type="text" placeholder="project description" v-model="project.projectDescription" />
+      <p class="">
+          <textarea class="h-[13rem] w-[30rem] bg-blue-100 p-2" placeholder="beskriv projektet her..." v-model="project.projectDescription"></textarea>
       </p>
 
       <p>
@@ -44,12 +44,14 @@
       <p>
         projectCategory: {{ project.projectCategory }}
       </p>
-      <!--
         <p>
-            <label for="webDesign">Web Design</label>
-            <input type="checkbox" id="webDesign" value="Web Design" v-model="project.projectCategory">
-             Add more options as needed 
-        </p> -->
+          Web Design: 
+          <input type="checkbox" id="webDesign" v-model="webDesignCheckbox" />
+        </p>
+        <p>
+          UI/UX:
+          <input type="checkbox" id="UIUX" v-model="uiuxCheckbox" />
+        </p>
         <!--
         <p>
           <label for="UI/UX">UI/UX</label>
@@ -109,15 +111,9 @@
 
 
 import useProjects from '../modules/useProjects.js';
-import { onMounted } from 'vue';
+import { onMounted, computed, ref} from 'vue';
 
 
-
-
-
-
-
-//--------
 const { 
   projects, 
   getProjectsData, 
@@ -127,6 +123,35 @@ const {
   firebaseUpdateSingleItem,
   //UpdateProductData,
 } = useProjects();
+
+
+
+const projectsRef = ref(projects);
+
+const webDesignCheckbox = computed({
+  get: () => projectsRef.value.some(project => project.projectCategory === "Web Design"),
+  set: (value) => {
+    projectsRef.value.forEach(project => {
+      project.projectCategory = value ? "Web Design" : '';
+      firebaseUpdateSingleItem(project);
+    });
+  },
+});
+
+const uiuxCheckbox = computed({
+  get: () => projectsRef.value.some(project => project.projectCategory === "UI/UX"),
+  set: (value) => {
+    projectsRef.value.forEach(project => {
+      project.projectCategory = value ? "UI/UX" : '';
+      firebaseUpdateSingleItem(project);
+    });
+  },
+});
+
+
+
+//--------
+
 
 onMounted(() => {
   getProjectsData();

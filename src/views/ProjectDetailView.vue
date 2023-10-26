@@ -1,25 +1,34 @@
-<template>
-  <div v-if="projectDetailView" class="projectDetailView mt-24">
-    <div class="grid grid-cols-2 ">
+<template class="">
+  <div v-if="projectDetailView" class="container projectDetailView mt-24 ">
+
+    <div class="grid grid-cols-2  ">
+
+      <!------------col 1 img------->
       <div class="col1 pr-3">
         <ul>
           <img class="object-cover h-[40rem] w-full rounded-md bg-clip-padding  border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
         </ul>
       </div>
-      <div class="col2 bg-slate-300 p-10 rounded-md">
+      <!--------col 2 name, desciption links------>
+      <div class="col2 bg-slate-300  rounded-md ">
         <ul>
+          <li class=" font-medium  "><span class=""></span> {{ projectDetailView.projectCategory }}</li>
+          <div class="child1 p-10">
+            
+            <li class="text-3xl font-medium  "><span class=""></span> {{ projectDetailView.projectName }}</li>
+            <li class="h-[28rem]"><span>Beskrivelse:</span> <br> {{ projectDetailView.projectDescription }}</li>
+          </div>
 
-          <li class="text-3xl font-medium "><span class=""></span> {{ projectDetailView.projectName }}</li>
-          <li><span>Beskrivelse:</span> <br> {{ projectDetailView.projectDescription }}</li>
-
-          <div class="grid grid-cols-3 pt-6">
-            <li><span>Onedrive Link:</span> {{ projectDetailView.onedriveLink }}</li>
-            <li><span>Github Link:</span> {{ projectDetailView.githubLink }}</li>
-            <li><span>Youtube Link:</span> {{ projectDetailView.youtubeLink }}</li>
+          <div class="child2 grid grid-cols-3 pt-2 justify-items-center ">
+            <button class="pr-3"><li class="bg-red-300 p-2"> {{ projectDetailView.onedriveLink }}</li></button>
+            <button class="pr-3"><li class="bg-red-300 p-2"> {{ projectDetailView.githubLink }}</li></button>
+            <button class="pr-3"><li class="bg-red-300 p-2"> {{ projectDetailView.youtubeLink }}</li></button>
           </div>
         </ul>
       </div>
     </div>
+
+
     <div class="grid grid-cols-2 justify-items-center ">
       <ul class="">
         <li class=""><span>Team:</span> {{ projectDetailView.projectTeam }}</li>
