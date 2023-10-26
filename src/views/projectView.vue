@@ -12,7 +12,6 @@
       oop through your projects and create links to their respective detail pages -->
       <div >
         <button class="button-yellow border-4 rounded-lg mt-24">
-          <p>hej</p>
          
           <router-link :to="{ name: 'projectdetail',  params: { id: project.id  }}">
             <button>View project</button>

@@ -1,10 +1,34 @@
 <template>
   <div v-if="projectDetailView" class="projectDetailView mt-24">
-    <ul>
-      <li><span>Status:</span> {{ projectDetailView.projectName }}</li>
-          
-    </ul>
-   
+    <div class="grid grid-cols-2 ">
+      <div class="col1 pr-3">
+        <ul>
+          <img class="object-cover h-[40rem] w-full rounded-md bg-clip-padding  border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+        </ul>
+      </div>
+      <div class="col2 bg-slate-300 p-10 rounded-md">
+        <ul>
+
+          <li class="text-3xl font-medium "><span class=""></span> {{ projectDetailView.projectName }}</li>
+          <li><span>Beskrivelse:</span> <br> {{ projectDetailView.projectDescription }}</li>
+
+          <div class="grid grid-cols-3 pt-6">
+            <li><span>Onedrive Link:</span> {{ projectDetailView.onedriveLink }}</li>
+            <li><span>Github Link:</span> {{ projectDetailView.githubLink }}</li>
+            <li><span>Youtube Link:</span> {{ projectDetailView.youtubeLink }}</li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 justify-items-center ">
+      <ul class="">
+        <li class=""><span>Team:</span> {{ projectDetailView.projectTeam }}</li>
+     </ul>
+
+     <ul>
+        <li class=""><span>Dato:</span> {{ projectDetailView.projectDate }}</li>
+     </ul>
+    </div>
   </div>
 </template>
 
