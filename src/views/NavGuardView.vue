@@ -93,7 +93,7 @@
       
       <!------------Item button (edit and delete)-------------->
       
-      <button class="btn-edit" @click="firebaseUpdateSingleItem(project.id)">Edit item</button>
+      <button class="btn-edit" @click="firebaseUpdateSingleItem(project)">Edit item</button>
       <hr>
       <button class="btn-delete" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
 

@@ -91,6 +91,9 @@ const useProjects = () => {
       projectDescription: project.projectDescription,
       projectTeam: project.projectTeam,
       projectTech: project.projectTech,
+      githubLink: project.githubLink,
+      onedriveLink: project.onedriveLink,
+      youtubeLink: project.youtubeLink,
      
      
     }).then(() => {
@@ -101,6 +104,9 @@ const useProjects = () => {
       UpdateProjectData.value.projectDescription = '';
       UpdateProjectData.value.projectTeam = '';
       UpdateProjectData.value.projectTech = '';
+      UpdateProjectData.value.githubLink = '';
+      UpdateProjectData.value.onedriveLink = '';
+      UpdateProjectData.value.youtubeLink = '';
    
     });
   };
