@@ -31,8 +31,10 @@ const router = createRouter({
       component: () => import('../views/NavGuardView.vue'),
       meta: {
         requiresAuth: true
-      }
+      },
+      props: true, // This allows passing the route params as props
     },
+    
     {
       path: '/login',
       name: 'login',
@@ -44,34 +46,32 @@ const router = createRouter({
 })
 
 
-router.beforeEach(async(to, from, next) => {
-  if(to.matched.some(record => record.meta.requiresAuth)) {
+router.beforeEach(async (to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
     if (await getCurrentUser()) {
-      next()
+      next();
+    } else {
+      next({ name: 'login' });
     }
-    else {
-      next({ path: '/login' })
-    }
+  } else {
+    next();
   }
-  else {
-    next()
-  }
-})
+});
 
 const getCurrentUser = () => {
   return new Promise((resolve, reject) => {
-    console.log("test currentUser", getCurrentUser)
     const removeListener = onAuthStateChanged(
       getAuth(),
       user => {
-        removeListener()
-        resolve(user)
+        removeListener();
+        resolve(user);
       },
       reject
-    )
-  })
-}
+    );
+  });
+};
+
+export default router;
 
 
 
-export default router

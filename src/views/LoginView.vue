@@ -1,11 +1,24 @@
-<template class=" ">
-  <div class="pt-40 ">
-    <h1>Login</h1>
-    Username: <input type="text" v-model="email" />
-    Password: <input type="password" v-model="password" />
-    <p v-if="errMsg"> {{ errMsg }}</p>
-    <button class="login " @click="logIn">Login</button>
-    <button class="logout " v-if="userAuthenticated" @click="logOut">Logout</button>
+<template class="container mx-auto  ">
+  <div class="mt-40 bg-gray-700  ">
+    <h1 class="flex justify-center text-2xl">Login</h1>
+    <div class="">
+      <div class=" flex justify-center">
+        <input  class="w-1/4 px-2 py-1 m-2" type="text" v-model="email" placeholder="Enter E-mail" />
+      
+      </div>
+      <div class="flex justify-center p-4">
+        
+         
+           <input class="w-1/4 px-2 py-1 m-2" type="password"  v-model="password" placeholder="Enter password" />
+         
+      </div>
+      <div class="flex justify-center">
+        <p v-if="errMsg"> {{ errMsg }}</p>
+      <button class="login button-standard " @click="logIn">Login</button>
+      <button class="logout " v-if="userAuthenticated" @click="logOut">Logout</button>
+      </div>
+      
+    </div>
   </div>
 </template>
 

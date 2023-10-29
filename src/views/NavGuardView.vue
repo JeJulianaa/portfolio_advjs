@@ -13,37 +13,98 @@
 
     </div>
     <hr>
+    
+      <div class="modal-content" v-for="project in projects" :key="project">
+        <button class="btn-edit button-standard mt-9" @click="openEditModal(project)">Edit item</button>
+        <div class="modal" v-if="isEditModalOpen">
+          <p>
+            ProjectName: {{ project.projectName }}
+          </p>
+          <p>
+            <input type="text" placeholder="New project name" v-model="project.projectName" />
+          </p>
+    
+          <p>
+            projectDescription: {{ project.projectDescription }}
+          </p>
+          <p class="">
+              <textarea class= "resize-y h-[8rem] w-[17rem] bg-blue-100 p-2" placeholder="beskriv projektet her..." v-model="project.projectDescription"></textarea>
+          </p>
+    
+          <p>
+            projectTeam: {{ project.projectTeam }}
+          </p>
+          <p>
+            <input type="text" placeholder="project Team" v-model="project.projectTeam" />
+          </p>
+    
+          <p>
+            projectCategory: {{ project.projectCategory }}
+          </p>
+          
+            <h2>Select Categories:</h2>
+            
+              <p>
+              Web Design: 
+              <input type="checkbox" id="webDesign" v-model="project.projectCategory" />
+              </p>
+              <p>
+                UI/UX:
+                <input type="checkbox" id="UI/UX" v-model="project.projectCategory" />
+              </p>
+            <!--
+            <p>
+              <label for="UI/UX">UI/UX</label>
+                <input type="checkbox" id="UI/UX" value="UI/ UX" v-model="project.projectCategory">
+            </p>
+          
+    
+    
+          <--------------project date (type=date)------------->
+          <p>
+            projectDate: {{ project.projectDate }}
+          </p>
+          <p>
+            <input type="date" placeholder="project date" v-model="project.projectDate" />
+          </p>
+    
+    
+          <!-------------------------links------------------------->
+          <p>
+            onedrive link: {{ project.onedriveLink }}
+          </p>
+          <p>
+            <input type="url" placeholder="link to onedrive" v-model="project.onedriveLink" />
+          </p>
+          <p>
+            Github link: {{ project.githubLink }}
+          </p>
+          <p>
+            <input type="url" placeholder="link to github" v-model="project.githubLink" />
+          </p>
+          <p>
+            youtube link: {{ project.youtubeLink }}
+          </p>
+          <p>
+            <input type="url" placeholder="link to youtube" v-model="project.youtubeLink" />
+          </p>
+         
 
-    <!--modal start that means this below will be invisible onto u close the modal-->
-    <EditProjectModal
-        v-if="isEditModalOpen"
-        :project="selectedProject"
-        @closeEditModal="isEditModalOpen = false"
-      />
-    <div v-for="project in projects" :key="project">
-      <p>
-        ProjectID: {{ project.id  }}
-      </p>
-     
-      <!-----different field to project (look at the names to se what it is)------->
-      <p>
-        ProjectName: {{ project.projectName }}
-      </p>
-     
+    
+        
+          <!------------Item button (edit and delete)-------------->
+        
+        
+          <button class="btn-delete mt-3 button-standard bg-red-500" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
+          <button class="btn-edit button-standard mx-4 bg-green-500" @click="firebaseUpdateSingleItem(project)">Save</button>
+          <button class="btn-close mb-10" @click="closeEditModal">Close</button>
+          <hr>
 
-  
-      
-      <!------------Item button (edit and delete)-------------->
-      
-      <button class="btn-edit" @click="openEditModal(project)">Edit item</button>
-      <button class="btn-delete" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
-      <hr>
-      
+        </div>
 
-   </div>
-   
-       
-      
+    </div>
+
+     <!--modal start that means this below will be invisible onto u close the modal-->    
  </div>
   
 
@@ -51,12 +112,12 @@
 </template>
 
 <script setup>
-
-
 import useProjects from '../modules/useProjects.js';
+
 import { onMounted  } from 'vue';
 import {  ref } from 'vue';
-import EditProjectModal from '../views/EditProjectModal.vue';
+
+import {  } from 'vue';
 
 
 
@@ -64,24 +125,26 @@ const { projects, getProjectsData, firebaseDeleteSingleItem, firebaseAddSingleIt
 
 
 
-const selectedProject = ref({});
 const isEditModalOpen = ref(false);
+const project = ref({});
 
-const openEditModal = (project) => {
-  selectedProject.value = project;
-  isEditModalOpen.value = true; // Open the edit modal
+
+
+const openEditModal = (selectedProject) => {
+ project.value = { ...selectedProject };
+  isEditModalOpen.value = true;
 };
 
-
-
-//--------
-
+const closeEditModal = () => {
+  isEditModalOpen.value = false;
+};
 
 onMounted(() => {
   getProjectsData();
-})
-
+});
 </script>
+
+
 
 <style>
 @media (min-width: 1024px) {
@@ -92,3 +155,4 @@ onMounted(() => {
   }
 }
 </style>
+      

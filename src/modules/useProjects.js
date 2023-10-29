@@ -1,6 +1,6 @@
 import { db } from '../firebase.js'
 
-import { ref} from 'vue'
+import { ref,} from 'vue'
 import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc, } from 'firebase/firestore';
 
 
@@ -145,7 +145,7 @@ const useProjects = () => {
     AddProjectData,
     firebaseUpdateSingleItem,
     UpdateProjectData,
-   
+    
   }
  }
 
