@@ -59,6 +59,9 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  
   min-height: 20vh; /* nav placering */
   color: var(--color-text); 
   background: var(--color-background);

@@ -1,9 +1,26 @@
 import { db } from '../firebase.js'
 
-import { ref } from 'vue'
+import { ref} from 'vue'
 import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc, } from 'firebase/firestore';
 
 
+//import { query, where, getDocs } from 'firebase/firestore';
+
+//const webDesignCheckbox = ref(false); // Initialize to false, or use an initial value as needed
+//const uiuxCheckbox = ref(false); // Initialize to false, or use an initial value as needed
+//const selectedCategories = ref([]); // Define selectedCategories as an empty ref array
+
+// Define the categories to search for
+//const categoriesToSearch = ['WebDesign', 'UI/UX'];
+
+// Query Firestore to find projects with matching categories
+//const q = query(collection(db, 'projects'), where('ProjectCategory', 'in', categoriesToSearch));
+////const querySnapshot = await getDocs(q);
+
+//querySnapshot.forEach((doc) => {
+  // Handle each project document that matches the categories
+ // console.log(doc.id, ' => ', doc.data());
+//});
 
 
 
@@ -11,7 +28,10 @@ const useProjects = () => {
 
   const projects = ref([]); // to store data from firebase
   const projectDataRef = collection(db, 'projects');
-  
+
+
+
+
 
   const AddProjectData = ref({
     projectName: '',
@@ -79,7 +99,7 @@ const useProjects = () => {
     
   }
 
-  const firebaseUpdateSingleItem = async (project) => {
+  const firebaseUpdateSingleItem = async (project,) => {
     const projectRef = doc(projectDataRef, project.id); // Assuming project.id is the document ID
   
     await updateDoc(projectRef, {
@@ -95,6 +115,8 @@ const useProjects = () => {
      
      
     }).then(() => {
+
+     
       // Clear the form data if needed
       UpdateProjectData.value.projectName = '';
       UpdateProjectData.value.projectCategory = '';
@@ -112,6 +134,7 @@ const useProjects = () => {
 
  
   
+  
 
 
   return {
@@ -122,9 +145,9 @@ const useProjects = () => {
     AddProjectData,
     firebaseUpdateSingleItem,
     UpdateProjectData,
-  
-
+   
   }
  }
 
   export default useProjects;
+ 
