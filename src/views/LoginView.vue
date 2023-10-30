@@ -1,15 +1,15 @@
-<template class="container mx-auto  ">
-  <div class="mt-40 bg-gray-700  ">
-    <h1 class="flex justify-center text-2xl">Login</h1>
-    <div class="">
-      <div class=" flex justify-center">
-        <input  class="w-1/4 px-2 py-1 m-2" type="text" v-model="email" placeholder="Enter E-mail" />
+<template class=" ">
+  <div class="container mx-auto mt-36 bg-gray-700  flex-grow flex-shrink w-[20rem] py-[10rem] sm:w-[35rem] rounded-md ">
+    <h1 class="flex justify-center text-2xl">Admin Login</h1>
+    <div class=" pt-4">
+      <div class=" flex justify-center px-[2rem] sm:px-36 pb-4">
+        <input  class="flex-grow flex-shrink px-4 py-2 " type="text" v-model="email" placeholder="Enter E-mail" />
       
       </div>
-      <div class="flex justify-center p-4">
+      <div class="flex justify-center px-[2rem] sm:px-36 pb-4">
         
          
-           <input class="w-1/4 px-2 py-1 m-2" type="password"  v-model="password" placeholder="Enter password" />
+           <input class="flex-grow flex-shrink px-4 py-2 " type="password"  v-model="password" placeholder="Enter password" />
          
       </div>
       <div class="flex justify-center">

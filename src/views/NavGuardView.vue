@@ -1,21 +1,24 @@
-<template class="flex justify-center">
+<template class="flex justify-center ">
   <div>
     NavGuardTest - future Admin page maybe stuff
   </div>
 
   
-  <div class="container mx-auto  project-page mt-24">
-    <h1>This is an about page</h1>
-
-    <button class="btn-add button-standard" @click="firebaseAddSingleItem()">Add Item</button>
-    <div>
-      <input type="text" placeholder="Project name" v-model="AddProjectData.projectName" >
-
-    </div>
+  <div class="container mx-auto  project-page mt-24 px-40">
+    <h2 class="text-lg flex justify-end pb-3">Add new project here</h2>
+    <section class="add-new-project flex justify-end">
+      
+      <div>
+        <input type="text" placeholder="Project name" v-model="AddProjectData.projectName" >
+      </div>
+      <button class="btn-add button-standard" @click="firebaseAddSingleItem()">Add Item</button>
+      
+    </section>
+    <h2 class="text-lg pb-1">Your Projects</h2>
     <hr>
     
          
-       <div class="modal-content" v-for="project in projects" :key="project.id">
+       <div class="modal-content mt-5" v-for="project in projects" :key="project.id">
         <p v-if="!isEditModalOpen">
           ProjectName: {{ project.projectName }}
         </p>
@@ -24,96 +27,109 @@
         </p>
 
           <!--MODAL: when clicking on edit item modal open-->
-          <button v-if="!isEditModalOpen" class="btn-edit button-standard mt-9" @click="openEditModal(project.id)">Edit item</button>
-          <hr v-if="!isEditModalOpen">
-          <div class="modal" v-if="isEditModalOpen && selectedProject === project.id">
-          <p>
-            ProjectName: {{ project.projectName }}
-          </p>
-          <p>
-            <input type="text" placeholder="New project name" v-model="project.projectName" />
-          </p>
-    
-          <p>
-            projectDescription: {{ project.projectDescription }}
-          </p>
-          <p class="">
-              <textarea class= "resize-y h-[8rem] w-[17rem] bg-blue-100 p-2" placeholder="beskriv projektet her..." v-model="project.projectDescription"></textarea>
-          </p>
-    
-          <p>
-            projectTeam: {{ project.projectTeam }}
-          </p>
-          <p>
-            <input type="text" placeholder="project Team" v-model="project.projectTeam" />
-          </p>
-    
-          <p>
-            projectCategory: {{ project.projectCategory }}
-          </p>
           
-            <h2>Select Categories:</h2>
-            
-              <p>
-              Web Design: 
-              <input type="checkbox" id="webDesign" v-model="project.projectCategory" />
-              </p>
-              <p>
-                UI/UX:
-                <input type="checkbox" id="UI/UX" v-model="project.projectCategory" />
-              </p>
-            <!--
-            <p>
-              <label for="UI/UX">UI/UX</label>
-                <input type="checkbox" id="UI/UX" value="UI/ UX" v-model="project.projectCategory">
-            </p>
-          
-    
-    
-          <--------------project date (type=date)------------->
-          <p>
-            projectDate: {{ project.projectDate }}
-          </p>
-          <p>
-            <input type="date" placeholder="project date" v-model="project.projectDate" />
-          </p>
-    
-    
-          <!-------------------------links------------------------->
-          <p>
-            onedrive link: {{ project.onedriveLink }}
-          </p>
-          <p>
-            <input type="url" placeholder="link to onedrive" v-model="project.onedriveLink" />
-          </p>
-          <p>
-            Github link: {{ project.githubLink }}
-          </p>
-          <p>
-            <input type="url" placeholder="link to github" v-model="project.githubLink" />
-          </p>
-          <p>
-            youtube link: {{ project.youtubeLink }}
-          </p>
-          <p>
-            <input type="url" placeholder="link to youtube" v-model="project.youtubeLink" />
-          </p>
          
+          <Transition v-if="closeEditModal">
+            <div class="modal" v-if="isEditModalOpen && selectedProject === project.id">
+              <p>
+                ProjectName: {{ project.projectName }}
+              </p>
+              <p>
+                <input type="text" placeholder="New project name" v-model="project.projectName" />
+              </p>
+        
+              <p>
+                projectDescription: {{ project.projectDescription }}
+              </p>
+              <p class="">
+                  <textarea class= "resize-y h-[8rem] w-[17rem] bg-blue-100 p-2" placeholder="beskriv projektet her..." v-model="project.projectDescription"></textarea>
+              </p>
+        
+              <p>
+                projectTeam: {{ project.projectTeam }}
+              </p>
+              <p>
+                <input type="text" placeholder="project Team" v-model="project.projectTeam" />
+              </p>
+        
+              <p>
+                projectCategory: {{ project.projectCategory }}
+              </p>
+              
+                <h2>Select Categories:</h2>
+                
+                  <p>
+                  Web Design: 
+                  <input type="checkbox" id="webDesign" v-model="project.projectCategory" />
+                  </p>
+                  <p>
+                    UI/UX:
+                    <input type="checkbox" id="UI/UX" v-model="project.projectCategory" />
+                  </p>
+                <!--
+                <p>
+                  <label for="UI/UX">UI/UX</label>
+                    <input type="checkbox" id="UI/UX" value="UI/ UX" v-model="project.projectCategory">
+                </p>
+              
+        
+        
+              <--------------project date (type=date)------------->
+              <p>
+                projectDate: {{ project.projectDate }}
+              </p>
+              <p>
+                <input type="date" placeholder="project date" v-model="project.projectDate" />
+              </p>
+        
+        
+              <!-------------------------links------------------------->
+              <p>
+                onedrive link: {{ project.onedriveLink }}
+              </p>
+              <p>
+                <input type="url" placeholder="link to onedrive" v-model="project.onedriveLink" />
+              </p>
+              <p>
+                Github link: {{ project.githubLink }}
+              </p>
+              <p>
+                <input type="url" placeholder="link to github" v-model="project.githubLink" />
+              </p>
+              <p>
+                youtube link: {{ project.youtubeLink }}
+              </p>
+              <p>
+                <input type="url" placeholder="link to youtube" v-model="project.youtubeLink" />
+              </p>
+            
 
-    
         
-          <!------------Item button (edit and delete)-------------->
+            
+              <!------------Item button (edit and delete)-------------->
+            
+              
+                
+              
+              <button class="btn-edit button-standard mx-4 bg-green-500" @click="firebaseUpdateSingleItem(project)">Save</button>
+              
+                  <button class="btn-close mb-10" @click="closeEditModal">Close
+                    
+                    
+                  </button>
+              
+             
+            
+          </div>
+        </Transition>
+        <button v-if="!isEditModalOpen" class="btn-edit button-standard " @click="openEditModal(project.id)">Edit item</button>
+        <div v-if="!isEditModalOpen">
+         
+              <button  class="btnDelete  button-standard bg-red-500" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
         
-        
-          <button class="btn-delete mt-3 button-standard bg-red-500" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
-          <button class="btn-edit button-standard mx-4 bg-green-500" @click="firebaseUpdateSingleItem(project)">Save</button>
-          <button class="btn-close mb-10" @click="closeEditModal">Close</button>
-          <hr>
-
         </div>
-
     </div>
-
+    
      <!--modal start that means this below will be invisible onto u close the modal-->    
  </div>
   
@@ -163,5 +179,17 @@ onMounted(() => {
     align-items: center;
   }
 }
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+};
+
+
 </style>
       
