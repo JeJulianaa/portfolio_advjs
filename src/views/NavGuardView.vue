@@ -14,8 +14,18 @@
     </div>
     <hr>
     
+         
        <div class="modal-content" v-for="project in projects" :key="project.id">
-          <button class="btn-edit button-standard mt-9" @click="openEditModal(project.id)">Edit item</button>
+        <p v-if="!isEditModalOpen">
+          ProjectName: {{ project.projectName }}
+        </p>
+        <p v-if="!isEditModalOpen">
+          projectCategory: {{ project.projectCategory }}
+        </p>
+
+          <!--MODAL: when clicking on edit item modal open-->
+          <button v-if="!isEditModalOpen" class="btn-edit button-standard mt-9" @click="openEditModal(project.id)">Edit item</button>
+          <hr v-if="!isEditModalOpen">
           <div class="modal" v-if="isEditModalOpen && selectedProject === project.id">
           <p>
             ProjectName: {{ project.projectName }}
@@ -124,8 +134,7 @@ import {  } from 'vue';
 const { projects, getProjectsData, firebaseDeleteSingleItem, firebaseUpdateSingleItem, firebaseAddSingleItem, AddProjectData } = useProjects();
 
 
-
-const selectedProject = ref({});
+const selectedProject = ref({}); // Store the ID of the selected project
 const isEditModalOpen = ref(false);
 
 const openEditModal = (projectId) => {
@@ -133,9 +142,15 @@ const openEditModal = (projectId) => {
   isEditModalOpen.value = true;
 };
 
+const closeEditModal = () => {
+  selectedProject.value = null; // Clear the selected project
+  isEditModalOpen.value = false;
+}; 
+
 onMounted(() => {
   getProjectsData();
 });
+
 </script>
 
 

@@ -38,7 +38,9 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/LoginView.vue'),
+      
+      props: true, // This allows passing the route params as props
     },
 
 
