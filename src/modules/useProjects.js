@@ -99,7 +99,7 @@ const useProjects = () => {
     
   }
 
-  const firebaseUpdateSingleItem = async (project,) => {
+  const firebaseUpdateSingleItem = async (project) => {
     const projectRef = doc(projectDataRef, project.id); // Assuming project.id is the document ID
   
     await updateDoc(projectRef, {
