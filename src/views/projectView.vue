@@ -1,33 +1,62 @@
 
 <template>
-  <div class="category-box mt-24">
+  <div class="category-box mt-24 mb-4">
     <button
-      type="button"
-      class="category-button"
-      @click="changeCategory('WebDesign')"
-      value="WebDesign"
+      type="button mx-2"
+      class="all"
+      @click="changeCategory('All')"
     >
-      Web
+      Se Alle
     </button>
     <button
       type="button"
-      class="category-button"
+      class="category-button mx-2"
+      @click="changeCategory('WebDesign')"
+      value="WebDesign"
+    >
+      WebDesign
+    </button>
+    <button
+      type="button"
+      class="category-button mx-2"
+      @click="changeCategory('MultiMedie')"
+      value="MultiMedie"
+    >
+      MultiMedie
+    </button>
+
+    <button
+      type="button"
+      class="category-button mx-2"
+      @click="changeCategory('GrafiskDesign')"
+      value="GrafiskDesign"
+    >
+      GrafiskDesign 
+    </button>
+
+    <button
+      type="button"
+      class="category-button mx-2"
       @click="changeCategory('UI/UX')"
       value="UI/UX"
     >
       UI/UX
     </button>
+
     <button
       type="button"
-      class="all"
-      @click="changeCategory('All')"
+      class="category-button mx-2"
+      @click="changeCategory('Markedføring')"
+      value="Markedføring"
     >
-      All
+      Markedføring
     </button>
-    <h1>This is an about page</h1>
+   
+    
   </div>
 
   <section class="container mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
+    <!-- filteredProjects to filter-->
     <div class="" v-for="project in filteredProjects" :key="project.id">
       <!-- loop through your projects and create links to their respective detail pages -->
       <div>

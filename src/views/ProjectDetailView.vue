@@ -12,7 +12,7 @@
       <!--------col 2 name, desciption links------>
       <div class="col2 bg-slate-300  rounded-md ">
         <ul>
-          <li class=" font-medium  "><span class=""></span> {{ projectDetailView.projectCategory }}</li>
+          <li class=" font-medium  "><span class=""></span> {{ projectDetailView.projectCategory.join(', ') }}</li>
           <div class="child1 p-10">
             
             <li class="text-3xl font-medium  "><span class=""></span> {{ projectDetailView.projectName }}</li>

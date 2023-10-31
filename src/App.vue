@@ -59,11 +59,12 @@ let logOut = () => {
 
  
 
-  <footer>
+  <footer >
     <hr class="border-2">
   
-    <div class="container mx-auto px-1 sm:px-4 py-10 grid grid-cols-1 sm:grid-cols-3">
-      <div>
+    <div class="container mx-auto  flex justify-center  py-10 grid grid-cols-1 sm:grid-cols-3">
+      
+      <div class="">
         <h4 class="text-lg font-bold">Kontakt Mig</h4>
         <ul class="mt-4">
           <li>
@@ -77,8 +78,9 @@ let logOut = () => {
           </li>
         </ul>
       </div>
-      <div>
-        <h4 class="text-lg font-bold">Links</h4>
+      
+      <div class="">
+        <h4 class="text-lg font-bold ">Links</h4>
         <ul class="mt-4">
           <li>
             <RouterLink to="/">Hjem</RouterLink>
@@ -89,8 +91,9 @@ let logOut = () => {
           
         </ul>
       </div>
-      <div>
-        <h4 class="text-lg font-bold">Links</h4>
+      
+      <div class=""> 
+        <h4 class="text-lg font-bold ">Links</h4>
         <ul class="mt-4">
           <li>
             <RouterLink to="/omMig">Om Mig</RouterLink>

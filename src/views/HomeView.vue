@@ -12,13 +12,13 @@
     <section >
         <h3 class="text-center pb-7 pt-7">latest Project</h3>
         <div class="container mx-auto grid grid-cols-1 sm:grid-cols-3  bg-green-300 max-w-none h-2/4">
-            <div class="bg-red-300 flex justify-center mx-4  ">
+            <div class="bg-red-300 flex justify-center mr-4  ">
                 <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
             </div>
-            <div class="bg-red-300 flex justify-center mx-4 mt-4 sm:mt-0">
+            <div class="bg-red-300 flex justify-center mt-4 sm:mt-0">
                 <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
             </div>
-            <div class="bg-red-300 flex justify-center mx-4 mt-4 sm:mt-0">
+            <div class="bg-red-300 flex justify-center ml-4 mt-4 sm:mt-0">
                 <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
             </div>
         </div>
@@ -88,7 +88,20 @@
         </div>
     </section>
 
-
+    <section >
+        <h3 class="text-center pb-7 pt-7">latest Project</h3>
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2  bg-green-300 max-w-none h-2/4">
+            <div class="bg-red-300 rounded-md flex justify-center mr-2 ">
+                <div class="object-cover w-full rounded-md opacity-50 border-gray-100" >
+                
+                </div>
+            </div>
+            <div class="bg-red-300 flex justify-center ml-2 mt-4 sm:mt-0">
+                <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+            </div>
+            
+        </div>
+    </section>
 
   
 </template>

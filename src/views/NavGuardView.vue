@@ -23,7 +23,7 @@
           ProjectName: {{ project.projectName }}
         </p>
         <p v-if="!isEditModalOpen">
-          projectCategory: {{ project.projectCategory }}
+          projectCategory: {{ project.projectCategory.join(', ') }}
         </p>
 
           <!--MODAL: when clicking on edit item modal open-->
@@ -31,8 +31,9 @@
          
           <Transition v-if="closeEditModal">
             <div class="modal" v-if="isEditModalOpen && selectedProject === project.id">
-              <p>
-                ProjectName: {{ project.projectName }}
+              <h3>ProjectName:</h3>
+              <p class="border-2 border-slate-100 mx-5">
+                 {{ project.projectName }}
               </p>
               <p>
                 <input type="text" placeholder="New project name" v-model="project.projectName" />
@@ -53,7 +54,7 @@
               </p>
         
               <p>
-                projectCategory: {{ project.projectCategory }}
+                projectCategory: {{ project.projectCategory.join(', ') }}
               </p>
               
                 <h2>Select Categories:</h2>
@@ -67,12 +68,12 @@
                     <input type="checkbox" id="UI/UX" value="UI/UX" v-model="project.projectCategory" />
                   </p>
                   <p>
-                  Video:
-                  <input type="checkbox" id="Video" value="Video" v-model="project.projectCategory" />
+                  Markedføring:
+                  <input type="checkbox" id="Markedføring" value="Markedføring" v-model="project.projectCategory" />
                   </p>
                   <p>
-                  Billede:
-                  <input type="checkbox" id="Billede" value="Billede" v-model="project.projectCategory" />
+                  MultiMedie:
+                  <input type="checkbox" id="MultiMedie" value="MultiMedie" v-model="project.projectCategory" />
                   </p>
                   <p>
                   GrafiskDesign:
