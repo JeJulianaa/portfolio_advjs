@@ -38,7 +38,11 @@ let logOut = () => {
 </script>
 
 <template>
-  <header class="sticky fixed top-0 left-0  w-auto  bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border-gray-100 my-2">
+   <!-- <div class="bg-colorpic z-[-2] h-[100%] object-cover w-full max-w-none max-h-none absolute  bg-gradient-to-r from-blue-200 to-cyan-200"></div> -->
+   <!-- <div class="bg-repeat" style="background-image: url(/assets/img/hvidbg.jpeg)"> -->
+    <!-- <img class="z-[-2] object-cover  w-full  max-w-none h-[100%] rounded-md  border-gray-100 absolute top-0 left-0 " src="./assets/img/hvidbg.jpeg" alt="">
+  </div> -->
+  <header class="z-[90] sticky fixed top-0 left-0  w-auto  bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border-gray-100 my-2">
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="90" height="90" />
 
     <div class="wrapper">
@@ -52,7 +56,7 @@ let logOut = () => {
       </nav>
     </div>
   </header>
-
+  
   <RouterView />
 
 
