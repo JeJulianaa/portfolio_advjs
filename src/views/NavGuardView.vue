@@ -23,7 +23,7 @@
           ProjectName: {{ project.projectName }}
         </p>
         <p v-if="!isEditModalOpen">
-          projectCategory: {{ AddProjectData.projectCategory }}
+          projectCategory: {{ project.projectCategory }}
         </p>
 
           <!--MODAL: when clicking on edit item modal open-->
@@ -32,51 +32,51 @@
           <Transition v-if="closeEditModal">
             <div class="modal" v-if="isEditModalOpen && selectedProject === project.id">
               <p>
-                ProjectName: {{ AddProjectData.projectName }}
+                ProjectName: {{ project.projectName }}
               </p>
               <p>
-                <input type="text" placeholder="New project name" v-model="AddProjectData.projectName" />
+                <input type="text" placeholder="New project name" v-model="project.projectName" />
               </p>
         
               <p>
-                projectDescription: {{ AddProjectData.projectDescription }}
+                projectDescription: {{ project.projectDescription }}
               </p>
               <p class="">
-                  <textarea class= "resize-y h-[8rem] w-[17rem] bg-blue-100 p-2" placeholder="beskriv projektet her..." v-model="AddProjectData.projectDescription"></textarea>
+                  <textarea class= "resize-y h-[8rem] w-[17rem] bg-blue-100 p-2" placeholder="beskriv projektet her..." v-model="project.projectDescription"></textarea>
               </p>
         
               <p>
-                projectTeam: {{ AddProjectData.projectTeam }}
+                projectTeam: {{ project.projectTeam }}
               </p>
               <p>
-                <input type="text" placeholder="project Team" v-model="AddProjectData.projectTeam" />
+                <input type="text" placeholder="project Team" v-model="project.projectTeam" />
               </p>
         
               <p>
-                projectCategory: {{ AddProjectData.projectCategory }}
+                projectCategory: {{ project.projectCategory }}
               </p>
               
                 <h2>Select Categories:</h2>
                 
                   <p>
                   Web Design: 
-                  <input type="checkbox" id="WebDesign" value="WebDesign" v-model="AddProjectData.projectCategory" />
+                  <input type="checkbox" id="WebDesign" value="WebDesign" v-model="project.projectCategory" />
                   </p>
                   <p>
                     UI/UX:
-                    <input type="checkbox" id="UI/UX" value="UI/UX" v-model="AddProjectData.projectCategory" />
+                    <input type="checkbox" id="UI/UX" value="UI/UX" v-model="project.projectCategory" />
                   </p>
                   <p>
                   Video:
-                  <input type="checkbox" id="Video" value="Video" v-model="AddProjectData.projectCategory" />
+                  <input type="checkbox" id="Video" value="Video" v-model="project.projectCategory" />
                   </p>
                   <p>
                   Billede:
-                  <input type="checkbox" id="Billede" value="Billede" v-model="AddProjectData.projectCategory" />
+                  <input type="checkbox" id="Billede" value="Billede" v-model="project.projectCategory" />
                   </p>
                   <p>
                   GrafiskDesign:
-                  <input type="checkbox" id="GrafiskDesign" value="GrafiskDesign" v-model="AddProjectData.projectCategory" />
+                  <input type="checkbox" id="GrafiskDesign" value="GrafiskDesign" v-model="project.projectCategory" />
                   </p>
                 <!--
                 <p>
@@ -155,11 +155,11 @@ import useProjects from '../modules/useProjects.js';
 import { onMounted  } from 'vue';
 import {  ref } from 'vue';
 
-import {  } from 'vue';
 
 
 
-const { projects, getProjectsData, firebaseDeleteSingleItem, firebaseUpdateSingleItem, firebaseAddSingleItem, AddProjectData } = useProjects();
+
+const { projects, getProjectsData, firebaseDeleteSingleItem, firebaseUpdateSingleItem, firebaseAddSingleItem, AddProjectData, } = useProjects();
 
 
 const selectedProject = ref({}); // Store the ID of the selected project

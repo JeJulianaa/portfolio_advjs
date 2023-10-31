@@ -1,13 +1,37 @@
 <template>
-  <div class="project-page mt-24">
-    <button type="button" class="web-btn" @click="changeCategory('WebDesign')" value="WebDesign">Web</button>
-    
-    <button type="button" class="all" @click="changeCategory('All')">All</button>
+  <div class="category-box mt-24">
+    <button
+      type="button"
+      class="category-button"
+      @click="changeCategory('WebDesign')"
+      value="WebDesign"
+    >
+      Web
+    </button>
+    <button
+      type="button"
+      class="category-button"
+      @click="changeCategory('UI/UX')"
+      value="UI/UX"
+    >
+      UI/UX
+    </button>
+    <button
+      type="button"
+      class="all"
+      @click="changeCategory('All')"
+    >
+      All
+    </button>
     <h1>This is an about page</h1>
+
+    <!-- Display the selected categories -->
+    
   </div>
+ 
 
 <section class="container mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 ">
-    <div class="" v-for="project in projects" :key="project.id">
+    <div class="" v-for="project in projects" :key="project">
         <!--loop through your projects and create links to their respective detail pages -->
         <div >
           <button class="button-yellow border-4 rounded-lg p-4">
@@ -37,31 +61,24 @@
 
 <script setup >
 import useProjects from '../modules/useProjects.js';
-import { onMounted } from 'vue'
+import { onMounted, ref} from 'vue';
 
 
+const { projects, getProjectsData } = useProjects();
 
+const selectedCategory = ref('All');
 
+const changeCategory = (category) => {
+  selectedCategory.value = category;
 
-const { projects, getProjectsData  } = useProjects();
-
-//const selectedCategory = ref('All'); // Initialize with 'All'
-
-
-
-//const changeCategory = (category) => {
- // selectedCategory.value = category;
   // Filter Firestore data based on the selected category
-  //if (category !== 'All') {
-  //  projects.value = projects.value.filter((project) => project.projectCategory === category);
-  //} else {
-  //  getProjectsData(); // If 'All' is selected, load all projects
- // }
-  // Filter Firestore data based on selected categories
- // projects.value = projects.value.filter((project) =>
-  //  selectedCategories.value.includes('All') || selectedCategories.value.includes(project.projectCategory)
-  //); 
-//};
+  if (category !== 'All') {
+    projects.value = projects.value.filter((project) => project.projectCategory === category);
+  } else {
+    getProjectsData(); // If 'All' is selected, load all projects
+  }
+};
+
 
 
 

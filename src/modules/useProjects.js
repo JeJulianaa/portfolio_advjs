@@ -1,6 +1,6 @@
 import { db } from '../firebase.js'
 
-import { ref,} from 'vue'
+import { ref } from 'vue'
 import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc, } from 'firebase/firestore';
 
 
@@ -44,6 +44,7 @@ const useProjects = () => {
    // projectImg:'',
   })
 
+  
   const getProjectsData = () => {
     onSnapshot(projectDataRef, (snapshot) => {
       projects.value = snapshot.docs.map(doc => {
@@ -128,7 +129,7 @@ const useProjects = () => {
     AddProjectData,
     firebaseUpdateSingleItem,
     UpdateProjectData,
-    
+   
   }
  }
 
