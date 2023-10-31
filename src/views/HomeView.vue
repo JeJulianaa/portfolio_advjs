@@ -13,17 +13,21 @@
                
                 
                 <section class="z-0">
-                    <div class="cover  bg-opacity-50 rounded-md relative">
-                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center pl-8 pb-18">
-                            <h1 class="text-white text-8xl">Alberte Juliana</h1>
+                    <div class="cover  bg-opacity-50 rounded-md relative ">
+                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center pl-[2rem] pb-[19rem] md:pb-[10rem] lg:pl-8 lg:pb-[12rem]">
+                            <h1 class="text-white text-4xl md:text-6xl lg:text-8xl">Alberte Juliana</h1>
                             
                         </div>
-                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center pl-[22rem] pt-[14rem]">
-                            <h2 class="text-white text-8xl">Torbensen</h2>
+                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center pl-[2rem] pt-[0rem] pb-[13rem] md:pb-[0] lg:pb-[13rem] lg:pl-[22rem] lg:pt-[14rem]">
+                            <h2 class="text-white text-7xl lg:text-8xl">Torbensen</h2>
                         </div>
-                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center pl-[23rem] pt-[24rem] ">
+                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center  pl-[2rem] lg:pl-[23rem] pt-[24rem] grid grid-cols-2">
                             <p class="text-white text-md">Multi Medie Designer med pafdjfk fsdjfksj  efdsf <br> sfdkfsdkfdsfdf dsfsdfs dfdg</p>
+                            <button class="text-container  text-lg">  <RouterLink to="/project-page">Se Projekter</RouterLink> </button>
                         </div>
+                        
+                        
+                        
                        <img class="z-10 object-cover h-[43rem] w-full rounded-md bg-clip-padding border-gray-100" src="../assets/img/hvidbg.jpeg" alt="">
                     </div>
                 </section>

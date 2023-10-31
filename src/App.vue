@@ -42,12 +42,12 @@ let logOut = () => {
    <!-- <div class="bg-repeat" style="background-image: url(/assets/img/hvidbg.jpeg)"> -->
     <!-- <img class="z-[-2] object-cover  w-full  max-w-none h-[100%] rounded-md  border-gray-100 absolute top-0 left-0 " src="./assets/img/hvidbg.jpeg" alt="">
   </div> -->
-  <header class="z-[90] sticky fixed top-0 left-0  w-auto  bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border-gray-100 my-2">
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="90" height="90" />
+  <header class="z-[90] sticky fixed top-0 left-0  w-auto border-gray-600 bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50  ">
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="50" height="50" />
 
     <div class="wrapper">
      
-      <nav>
+      <nav class="">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/project-page">Projekter</RouterLink>
         <RouterLink v-if="isLoggedIn" to="/navguard">NavGuard</RouterLink>
@@ -123,7 +123,7 @@ let logOut = () => {
 
 <style scoped>
 header {
-  line-height: 1.5;
+  line-height: 1.;
   max-height: 100vh;
   width: 100%;
   
@@ -137,9 +137,10 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 1rem;
   
 }
 
