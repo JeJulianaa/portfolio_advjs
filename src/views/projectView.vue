@@ -40,7 +40,7 @@
               ProjectName: {{ project.projectName }}
             </p>
             <p>
-              projectCategory: {{ project.projectCategory }}
+              projectCategory: {{ project.projectCategory.join(', ') }}
             </p>
           </div>
         </button>
