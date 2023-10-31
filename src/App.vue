@@ -54,7 +54,65 @@ let logOut = () => {
   </header>
 
   <RouterView />
+
+
+
+ 
+
+  <footer>
+    <hr class="border-2">
+  
+    <div class="container mx-auto px-1 sm:px-4 py-10 grid grid-cols-1 sm:grid-cols-3">
+      <div>
+        <h4 class="text-lg font-bold">Kontakt Mig</h4>
+        <ul class="mt-4">
+          <li>
+            <span class="text-gray-400">Mobil:</span> 21 16 38 58
+          </li>
+          <li>
+            <span class="text-gray-400">Email:</span> Alberte.torbensen@gmail.com
+          </li>
+          <li>
+            <span class="text-gray-400">Adresse:</span> Esbjerg 6700
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold">Links</h4>
+        <ul class="mt-4">
+          <li>
+            <RouterLink to="/">Hjem</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/project-page">Projekter</RouterLink>
+          </li>
+          
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold">Links</h4>
+        <ul class="mt-4">
+          <li>
+            <RouterLink to="/omMig">Om Mig</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/kontakt">Kontakt</RouterLink>
+          </li>
+        </ul>
+      </div>
+
+      <!--<div class="flex items-center justify-center md:col-start-4">
+        <img src="/logo.png" alt="Logo" class="w-12 h-12 mb-4">
+        <p class="text-gray-400">&copy; 2023 Your Company Name</p>
+      </div>-->
+    </div>
+
+  
+
+</footer>
 </template>
+
+
 
 <style scoped>
 header {

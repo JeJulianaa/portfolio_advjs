@@ -4,23 +4,6 @@ import { ref,} from 'vue'
 import { collection, onSnapshot, doc, deleteDoc, addDoc, updateDoc, } from 'firebase/firestore';
 
 
-//import { query, where, getDocs } from 'firebase/firestore';
-
-//const webDesignCheckbox = ref(false); // Initialize to false, or use an initial value as needed
-//const uiuxCheckbox = ref(false); // Initialize to false, or use an initial value as needed
-//const selectedCategories = ref([]); // Define selectedCategories as an empty ref array
-
-// Define the categories to search for
-//const categoriesToSearch = ['WebDesign', 'UI/UX'];
-
-// Query Firestore to find projects with matching categories
-//const q = query(collection(db, 'projects'), where('ProjectCategory', 'in', categoriesToSearch));
-////const querySnapshot = await getDocs(q);
-
-//querySnapshot.forEach((doc) => {
-  // Handle each project document that matches the categories
- // console.log(doc.id, ' => ', doc.data());
-//});
 
 
 
@@ -42,7 +25,7 @@ const useProjects = () => {
     youtubeLink:'',
     projectTeam:'',
     projectTech:'',
-    projectCategory:'',
+    projectCategory:[],
   
     //projectImg:'',
   })
@@ -56,7 +39,7 @@ const useProjects = () => {
     youtubeLink:'',
     projectTeam:'',
     projectTech:'',
-    projectCategory:'',
+    projectCategory:[],
    
    // projectImg:'',
   })

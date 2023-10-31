@@ -12,7 +12,7 @@
            <input class="flex-grow flex-shrink px-4 py-2 " type="password"  v-model="password" placeholder="Enter password" />
          
       </div>
-      <div class="flex justify-center">
+      <div class="flex justify-center " @keyup.enter="logIn">
         <p v-if="errMsg"> {{ errMsg }}</p>
       <button class="login button-standard " @click="logIn">Login</button>
       <button class="logout " v-if="userAuthenticated" @click="logOut">Logout</button>

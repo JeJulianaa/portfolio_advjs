@@ -23,7 +23,7 @@
           ProjectName: {{ project.projectName }}
         </p>
         <p v-if="!isEditModalOpen">
-          projectCategory: {{ project.projectCategory }}
+          projectCategory: {{ AddProjectData.projectCategory }}
         </p>
 
           <!--MODAL: when clicking on edit item modal open-->
@@ -32,39 +32,51 @@
           <Transition v-if="closeEditModal">
             <div class="modal" v-if="isEditModalOpen && selectedProject === project.id">
               <p>
-                ProjectName: {{ project.projectName }}
+                ProjectName: {{ AddProjectData.projectName }}
               </p>
               <p>
-                <input type="text" placeholder="New project name" v-model="project.projectName" />
+                <input type="text" placeholder="New project name" v-model="AddProjectData.projectName" />
               </p>
         
               <p>
-                projectDescription: {{ project.projectDescription }}
+                projectDescription: {{ AddProjectData.projectDescription }}
               </p>
               <p class="">
-                  <textarea class= "resize-y h-[8rem] w-[17rem] bg-blue-100 p-2" placeholder="beskriv projektet her..." v-model="project.projectDescription"></textarea>
+                  <textarea class= "resize-y h-[8rem] w-[17rem] bg-blue-100 p-2" placeholder="beskriv projektet her..." v-model="AddProjectData.projectDescription"></textarea>
               </p>
         
               <p>
-                projectTeam: {{ project.projectTeam }}
+                projectTeam: {{ AddProjectData.projectTeam }}
               </p>
               <p>
-                <input type="text" placeholder="project Team" v-model="project.projectTeam" />
+                <input type="text" placeholder="project Team" v-model="AddProjectData.projectTeam" />
               </p>
         
               <p>
-                projectCategory: {{ project.projectCategory }}
+                projectCategory: {{ AddProjectData.projectCategory }}
               </p>
               
                 <h2>Select Categories:</h2>
                 
                   <p>
                   Web Design: 
-                  <input type="checkbox" id="webDesign" v-model="project.projectCategory" />
+                  <input type="checkbox" id="WebDesign" value="WebDesign" v-model="AddProjectData.projectCategory" />
                   </p>
                   <p>
                     UI/UX:
-                    <input type="checkbox" id="UI/UX" v-model="project.projectCategory" />
+                    <input type="checkbox" id="UI/UX" value="UI/UX" v-model="AddProjectData.projectCategory" />
+                  </p>
+                  <p>
+                  Video:
+                  <input type="checkbox" id="Video" value="Video" v-model="AddProjectData.projectCategory" />
+                  </p>
+                  <p>
+                  Billede:
+                  <input type="checkbox" id="Billede" value="Billede" v-model="AddProjectData.projectCategory" />
+                  </p>
+                  <p>
+                  GrafiskDesign:
+                  <input type="checkbox" id="GrafiskDesign" value="GrafiskDesign" v-model="AddProjectData.projectCategory" />
                   </p>
                 <!--
                 <p>

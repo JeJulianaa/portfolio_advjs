@@ -7,16 +7,16 @@
   </div>
 
 <section class="container mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 ">
-    <div class="" v-for="project in projects" :key="project.ID">
+    <div class="" v-for="project in projects" :key="project.id">
         <!--loop through your projects and create links to their respective detail pages -->
         <div >
           <button class="button-yellow border-4 rounded-lg p-4">
 
           
-            <router-link :to="{ name: 'projectdetail',  params: { id: project.id  }}">
+            <router-link :to="{ name: 'projectdetail',  params: { id: project.id}}">
               <button><img class="object-cover w-full  rounded-md bg-clip-padding  border-gray-100" src="../assets/img/Cup_noodles.jpg" alt=""></button>
             </router-link>
-            <!--<router-link :to="{ name: 'projectdetail',  params: { id: project.id  }}">-->
+         
               <div class="overflow-hidden rounded-lg">
                 <p>
                   ProjectName: {{ project.projectName }}
@@ -40,6 +40,9 @@ import useProjects from '../modules/useProjects.js';
 import { onMounted } from 'vue'
 
 
+
+
+
 const { projects, getProjectsData  } = useProjects();
 
 //const selectedCategory = ref('All'); // Initialize with 'All'
@@ -61,8 +64,10 @@ const { projects, getProjectsData  } = useProjects();
 //};
 
 
+
 onMounted(() => {
   getProjectsData();
+
 });
 
 

@@ -9,9 +9,24 @@
         </div>
     </section>
 
+    <section >
+        <h3 class="text-center">latest Project</h3>
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-3  bg-green-300 max-w-none h-2/4">
+            <div class="bg-red-300 flex justify-center mx-4  ">
+                <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+            </div>
+            <div class="bg-red-300 flex justify-center mx-4 mt-4 sm:mt-0">
+                <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+            </div>
+            <div class="bg-red-300 flex justify-center mx-4 mt-4 sm:mt-0">
+                <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
     <section class="container mx-auto max-w-none">
         <p class="flex justify-center pb-7 pt-7">Min servies</p>
-        <div class="w-full flex justify-center 2-cols">
+        <div class="w-full flex justify-center ">
             <div class="col1  w-1/2 mr-3 object-fill">
                 <!-- col1 content -->
                 <div class="w-full flex flex-col bg-gray-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border-gray-100 p-10 mb-2 flex-grow flex-shrink">
