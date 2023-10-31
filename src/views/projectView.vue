@@ -1,6 +1,6 @@
 
 <template>
-  <div class="category-box mt-24 mb-4">
+  <div class="category-box pt-2 mb-4">
     <button
       type="button mx-2"
       class="all"
@@ -55,7 +55,7 @@
     
   </div>
 
-  <section class="container mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
+  <section class="container mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 pb-10">
     <!-- filteredProjects to filter-->
     <div class="" v-for="project in filteredProjects" :key="project.id">
       <!-- loop through your projects and create links to their respective detail pages -->

@@ -4,7 +4,7 @@
 
 <template class="container mx-auto ">
     <section>
-        <div class="cover bg-slate-700 rounded-md h-[43rem] mt-24">
+        <div class="cover bg-slate-700 rounded-md h-[43rem] ">
             <h1 class="h-full">billede</h1>
         </div>
     </section>
@@ -13,13 +13,13 @@
         <h3 class="text-center pb-7 pt-7">latest Project</h3>
         <div class="container mx-auto grid grid-cols-1 sm:grid-cols-3  bg-green-300 max-w-none h-2/4">
             <div class="bg-red-300 flex justify-center mr-4  ">
-                <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+                <img class="object-cover w-full rounded-md bg-clip-padding  border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
             </div>
             <div class="bg-red-300 flex justify-center mt-4 sm:mt-0">
-                <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+                <img class="object-cover w-full rounded-md bg-clip-padding  border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
             </div>
             <div class="bg-red-300 flex justify-center ml-4 mt-4 sm:mt-0">
-                <img class="object-cover w-full rounded-md bg-clip-padding opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+                <img class="object-cover w-full rounded-md bg-clip-padding  border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
             </div>
         </div>
     </section>
@@ -90,10 +90,10 @@
 
     <section >
         <h3 class="text-center pb-7 pt-7">latest Project</h3>
-        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2  bg-green-300 max-w-none h-2/4">
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2  bg-green-300 max-w-none pb-40">
             <div class="bg-red-300 rounded-md flex justify-center mr-2 ">
-                <div class="object-cover w-full rounded-md opacity-50 border-gray-100" >
-                
+                <div class="object-cover w-full  rounded-md opacity-50 border-gray-100" >
+                <h1>hej</h1>
                 </div>
             </div>
             <div class="bg-red-300 flex justify-center ml-2 mt-4 sm:mt-0">

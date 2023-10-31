@@ -1,5 +1,5 @@
 <template class="">
-  <div v-if="projectDetailView" class="container projectDetailView mt-24 ">
+  <div v-if="projectDetailView" class="container projectDetailView ">
 
     <div class="grid grid-cols-2  ">
 

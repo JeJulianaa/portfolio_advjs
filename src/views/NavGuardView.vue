@@ -1,10 +1,8 @@
 <template class="flex justify-center ">
-  <div>
-    NavGuardTest - future Admin page maybe stuff
-  </div>
+  
 
   
-  <div class="container mx-auto  project-page mt-24 px-40">
+  <div class="container mx-auto  project-page mb-20 px-40">
     <h2 class="text-lg flex justify-end pb-3">Add new project here</h2>
     <section class="add-new-project flex justify-end">
       
@@ -126,23 +124,20 @@
               
               <button class="btn-edit button-standard mx-4 bg-green-500" @click="firebaseUpdateSingleItem(project)">Save</button>
               
-                  <button class="btn-close mb-10" @click="closeEditModal">Close
-                    
-                    
-                  </button>
+                  <button class="btn-close mb-10" @click="closeEditModal">Close</button>
               
              
             
           </div>
-        </Transition>
-        <button v-if="!isEditModalOpen" class="btn-edit button-standard " @click="openEditModal(project.id)">Edit item</button>
+         </Transition>
+        
         <div v-if="!isEditModalOpen">
-         
-              <button  class="btnDelete  button-standard bg-red-500" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
+          <button v-if="!isEditModalOpen" class="mr-2 btn-edit button-standard " @click="openEditModal(project.id)">Edit item</button>
+            <button  class="btnDelete  button-standard bg-red-500" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
         
         </div>
     </div>
-    
+    <hr class="mt-4">
      <!--modal start that means this below will be invisible onto u close the modal-->    
  </div>
   
