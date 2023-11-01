@@ -2,11 +2,11 @@
 <template>
     <section>
         <div class="container flex justify-center mx-auto">
-            <div class="w-[95%] py-20 grid grid-cols-2 gap-3 ">
+            <div class="w-[95%] py-20 grid grid-cols-1 md:grid-cols-2 gap-3 ">
                 <div class="">
                     <h5>Kompentencer</h5>
                     <div>
-                    <h1 class="text-7xl">"en pedel" <br> bare inde for Design verden.   </h1> 
+                    <h1 class="text-5xl md:text-7xl">"En pedel" <br> bare inde for Design verden.   </h1> 
                     </div>
                 </div>
                 <div class="flex self-end ">
