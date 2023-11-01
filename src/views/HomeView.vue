@@ -14,21 +14,22 @@
                 
                 <section class="z-0">
                     <div class="cover  bg-opacity-50 rounded-md relative ">
-                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center pl-[2rem] pb-[19rem] md:pb-[10rem] lg:pl-8 lg:pb-[12rem]">
-                            <h1 class="text-white text-4xl md:text-6xl lg:text-8xl">Alberte Juliana</h1>
+                        <div class="text-container absolute top-0 left-0 w-full h-full flex xl:items-center pl-[1rem] pb-[17rem] pt-[9rem] md:pb-[10rem] md:pt-[17rem] lg:pb-[0rem] lg:pl-8  lg:pt-[19rem] xl:pt-[0rem] xl:pb-[2rem]">
+                            <h1 class="text-white text-5xl md:text-6xl lg:text-8xl  xl:text-8xl">Alberte Juliana</h1>
                             
                         </div>
-                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center pl-[2rem] pt-[0rem] pb-[13rem] md:pb-[0] lg:pb-[13rem] lg:pl-[22rem] lg:pt-[14rem]">
-                            <h2 class="text-white text-7xl lg:text-8xl">Torbensen</h2>
+                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center pl-[1rem] pt-[5.8rem] pb-[7rem] md:pb-[0] md:pt-[2rem] lg:pb-[7rem] lg:pl-[2rem] lg:pt-[20rem] xl:pb-[13rem] xl:pl-[22rem] xl:pt-[22rem]">
+                            <h2 class="text-white text-5xl md:text-6xl lg:text-8xl xl:text-8xl ">Torbensen</h2>
                         </div>
-                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center  pl-[2rem] lg:pl-[23rem] pt-[24rem] grid grid-cols-2">
-                            <p class="text-white text-md">Multi Medie Designer med pafdjfk fsdjfksj  efdsf <br> sfdkfsdkfdsfdf dsfsdfs dfdg</p>
-                            <button class="text-container  text-lg">  <RouterLink to="/project-page">Se Projekter</RouterLink> </button>
+                        <div class="text-container absolute top-0 left-0 w-full h-full flex items-center grid grid-cols-1  md:grid-cols-2">
+                            <p class="text-white text-md pt-[18.1rem] pl-[1rem]  lg:pl-[3rem] lg:pt-[23rem] xl:pl-[23rem] pt-[12rem] md:pt-[16rem]">Multi Medie Designer med pafdjfk fsdjfksj  efdsf <br> sfdkfsdkfdsfdf dsfsdfs dfdg</p>
+
+                            <button class="text-container  text-lg pt-[3rem] pb-[7rem]  pl-[0rem] md:pl-[3rem] md:pb-[0rem] md:pt-[16rem]  lg:pl-[16rem] lg:pt-[23rem]  xl:pl-[23rem]    ">  <RouterLink to="/project-page">Se Projekter</RouterLink> </button>
                         </div>
                         
                         
                         
-                       <img class="z-10 object-cover h-[43rem] w-full rounded-md bg-clip-padding border-gray-100" src="../assets/img/hvidbg.jpeg" alt="">
+                       <img class="z-10 object-cover  h-[30rem] md:h-[43rem]  w-full rounded-md bg-clip-padding border-gray-100" src="../assets/img/hvidbg.jpeg" alt="">
                     </div>
                 </section>
 
@@ -55,7 +56,7 @@
                             <div class="w-full flex flex-col bg-gray-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm  border-gray-100 p-10 mb-2 flex-grow flex-shrink">
                                 <h3 class="text-xl font-medium pb-2">Marketing</h3>
                                 <div class="pr-[2rem] flex-grow flex-shrink">
-                                    <p class="text-xl font-medium">
+                                    <p class=" font-medium">
                                         Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                         <!-- Add more text content here as needed -->
                                     </p>
@@ -66,7 +67,7 @@
                                 <!-- Column 2 content -->
                                 <h3 class="text-xl font-medium pb-2">Marketing</h3>
                                 <div class="pr-[2rem] flex-grow flex-shrink">
-                                    <p class="text-xl font-medium">
+                                    <p class=" font-medium">
                                         Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                         <!-- Add more text content here as needed -->
                                     </p>
@@ -76,7 +77,7 @@
                                 <!-- Column 3 content -->
                                 <h3 class="text-xl font-medium pb-2">Marketing</h3>
                                 <div class="pr-[2rem] flex-grow flex-shrink">
-                                    <p class="text-xl font-medium">
+                                    <p class="font-medium">
                                         Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                         <!-- Add more text content here as needed -->
                                     </p>
@@ -86,7 +87,7 @@
                                 <!-- Column 4 content -->
                                 <h3 class="text-xl font-medium pb-2">Marketing</h3>
                                 <div class="pr-[2rem] flex-grow flex-shrink">
-                                    <p class="text-xl font-medium">
+                                    <p class=" font-medium">
                                         Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                         <!-- Add more text content here as needed -->
                                     </p>
@@ -96,7 +97,7 @@
                                 <!-- Column 4 content -->
                                 <h3 class="text-xl font-medium pb-2">Marketing</h3>
                                 <div class="pr-[2rem] flex-grow flex-shrink">
-                                    <p class="text-xl font-medium">
+                                    <p class=" font-medium">
                                         Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                         <!-- Add more text content here as needed -->
                                     </p>

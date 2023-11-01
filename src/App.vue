@@ -48,7 +48,7 @@ let logOut = () => {
     <div class="wrapper">
      
       <nav class="">
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink  to="/">Home</RouterLink>
         <RouterLink to="/project-page">Projekter</RouterLink>
         <RouterLink v-if="isLoggedIn" to="/navguard">NavGuard</RouterLink>
         <button  @click="logOut" v-if="isLoggedIn">Log Out</button>
@@ -123,7 +123,7 @@ let logOut = () => {
 
 <style scoped>
 header {
-  line-height: 1.;
+  line-height: 0.8;
   max-height: 100vh;
   width: 100%;
   
@@ -154,7 +154,7 @@ nav a.router-link-exact-active:hover {
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
   border-left: 1px solid var(--color-border);
 
 }
@@ -187,7 +187,7 @@ nav a:first-of-type {
     
     font-size: 1rem;
 
-    padding: 1rem 0;
+    padding: 0rem 0;
     margin-top: 1rem;
   }
   
