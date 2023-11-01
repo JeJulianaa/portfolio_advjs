@@ -4,19 +4,25 @@
     <div class="grid grid-cols-2  ">
 
       <!------------col 1 img------->
-      <div class="col1 pr-3">
-        <ul>
-          <img class="object-cover h-[40rem] w-full rounded-md bg-clip-padding  border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
-        </ul>
-      </div>
+      <!-- <div class="col1 pr-3" v-if="project.projectImg">
+        <div>
+          <img class="h-20 w-20" id="projectImage" :src="project.projectImg" alt="Project Image" >
+         
+        </div>
+      </div> -->
       <!--------col 2 name, desciption links------>
       <div class="col2 bg-slate-300  rounded-md ">
         <ul>
-          <li class=" font-medium  "><span class=""></span> {{ projectDetailView.projectCategory.join(', ') }}</li>
+          <li class=" font-medium  ">
+            <span >Team:</span>
+             {{ projectDetailView.projectCategory.join(', ') }}
+          </li>
           <div class="child1 p-10">
             
-            <li class="text-3xl font-medium  "><span class=""></span> {{ projectDetailView.projectName }}</li>
-            <li class="h-[28rem]"><span>Beskrivelse:</span> <br> {{ projectDetailView.projectDescription }}</li>
+            <li  class="text-3xl font-medium  ">
+              <span class=""></span> {{ projectDetailView.projectName }}
+            </li>
+            <li  class="h-[28rem]"><span>Beskrivelse:</span> <br> {{ projectDetailView.projectDescription }}</li>
           </div>
 
           <div class="child2 grid grid-cols-3 pt-2 justify-items-center ">
@@ -65,6 +71,7 @@ const projectDetailView = computed(() => {
 const {
   firebaseDeleteSingleItem,
   firebaseUpdateSingleItem,
+  
 } = useProjects();
 
 

@@ -6,8 +6,8 @@
 
 
 #app {
-  width: 200vh;
-  max-width: 120rem;
+  width: 100%;
+  max-width: 100%;
   /*margin: 0 auto; */
   padding: 1rem;
  
@@ -42,14 +42,15 @@ a,
   body {
     display: flex;
     justify-content: center;
+    margin: 0;
     
     place-items: center;
   }
 
   #app {
     
-    grid-template-columns: 1fr 1fr;
-    padding: 0 1rem;
+     grid-template-columns: 1fr 1fr;
+    padding: 0 1rem; 
   }
 }
 

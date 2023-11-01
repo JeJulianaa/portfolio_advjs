@@ -113,7 +113,14 @@
               <p>
                 <input type="url" placeholder="link to youtube" v-model="project.youtubeLink" />
               </p>
-            
+
+              <div>
+                <input type="file" @change="uploadImg" accept="image/*">
+              </div>
+
+              <img v-if="project.projectImg" :src="project.projectImg" alt="Project Image" />
+              
+              
 
         
             
@@ -155,7 +162,7 @@ import {  ref } from 'vue';
 
 
 
-const { projects, getProjectsData, firebaseDeleteSingleItem, firebaseUpdateSingleItem, firebaseAddSingleItem, AddProjectData, } = useProjects();
+const { projects, getProjectsData, firebaseDeleteSingleItem, firebaseUpdateSingleItem, firebaseAddSingleItem, AddProjectData, uploadImg } = useProjects();
 
 
 const selectedProject = ref({}); // Store the ID of the selected project
@@ -170,6 +177,7 @@ const closeEditModal = () => {
   selectedProject.value = null; // Clear the selected project
   isEditModalOpen.value = false;
 }; 
+
 
 onMounted(() => {
   getProjectsData();
