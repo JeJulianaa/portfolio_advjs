@@ -18,11 +18,19 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/projectView.vue')
     },
+  
     {
     path: '/projectdetail/:id',
     name: 'projectdetail',
     component: () => import('../views/ProjectDetailView.vue'),
     props: true, // This allows passing the route params as props
+    },
+
+    {
+      path: '/Services',
+      name: 'Services',
+      component: () => import('../views/ServicesView.vue'),
+      props: true, // This allows passing the route params as props
     },
 
     {

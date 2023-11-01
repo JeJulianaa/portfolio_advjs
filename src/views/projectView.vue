@@ -55,38 +55,43 @@
     
   </div>
 
-  <section class="container mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 pb-10">
+  <section class="container mx-auto w-[95%]  ">
     <!-- filteredProjects to filter-->
-    <div class="" v-for="project in filteredProjects" :key="project.id">
-      <!-- loop through your projects and create links to their respective detail pages -->
-      <div>
-        <button class="button-yellow border-4 rounded-lg p-4" >
-          <router-link :to="{ name: 'projectdetail', params: { id: project.id }}">
-            <!-- <div v-if="project.projectImg">
-              <img
-                class="w-20 h-20 object-cover rounded-md bg-clip-padding border-gray-100"
-                id="projectImage"
-                :src="project.projectImg"
-                alt="Project Image"
-                @error="handleImageError"
-              >
-            </div> -->
-            
-            
-            
-            
-            <div class="overflow-hidden rounded-lg">
-              <p>
-                ProjectName: {{ project.projectName }}
-              </p>
-              <p>
-                projectCategory: {{ project.projectCategory.join(', ') }}
-              </p>
-            </div>
-           </router-link>
-        </button>
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-3 max-w-none pb-3">
+      <div class="w-full " v-for="project in filteredProjects" :key="project.id">
+        <!-- loop through your projects and create links to their respective detail pages -->
+        <div>
+          <button class="button-yellow  rounded-lg " >
+            <router-link :to="{ name: 'projectdetail', params: { id: project.id }}">
+              <div class="  h-full w-full  shrink">
+                              <img class="object-cover w-full h-full rounded-md opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+              </div>
+              <!-- <div v-if="project.projectImg">
+                <img
+                  class="w-20 h-20 object-cover rounded-md bg-clip-padding border-gray-100"
+                  id="projectImage"
+                  :src="project.projectImg"
+                  alt="Project Image"
+                  @error="handleImageError"
+                >
+              </div> -->
+              
+              
+              
+              
+              <!-- <div class="overflow-hidden rounded-lg">
+                <p>
+                  ProjectName: {{ project.projectName }}
+                </p>
+                <p>
+                  projectCategory: {{ project.projectCategory.join(', ') }}
+                </p>
+              </div> -->
+            </router-link>
+          </button>
+        </div>
       </div>
-    </div>
+  </div>
   </section>
 </template>
 

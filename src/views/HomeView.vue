@@ -51,7 +51,7 @@
 
                 <!--2cols - Sevies and Img--->
                 <section class="container w-full">
-                    <p class="  text-center pb-7 pt-14">Min servies</p>
+                    <p class="  text-center pb-7 pt-14">Min Færdigheder</p>
                     <div class=" flex grid grid-cols-1 sm:grid-cols-2 w-full items-center">
                         <div class="col1  md:mr-3 flex-grow flex-shrink ">
 
@@ -61,7 +61,7 @@
                                     <!-- Column 1 content -->
                                     <div class=" mr-2">
                                         <h3 class="text-xl font-medium ">Marketing</h3>
-                                        <p class="hidden sm:contents font-medium ">
+                                        <p class="lg:contents sm:hidden font-medium ">
                                             Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                            
                                         </p>
@@ -80,7 +80,7 @@
                                     <!-- Column 2 content -->
                                     <div class=" mr-2">
                                         <h3 class="text-xl font-medium ">Marketing</h3>
-                                        <p class="hidden sm:contents font-medium ">
+                                        <p class="lg:contents sm:hidden font-medium ">
                                             Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                          
                                         </p>
@@ -97,7 +97,7 @@
                                     <!-- Column 3 content -->
                                     <div class=" mr-2">
                                         <h3 class="text-xl font-medium ">Marketing</h3>
-                                        <p class="hidden sm:contents font-medium ">
+                                        <p class="lg:contents sm:hidden font-medium ">
                                             Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                            
                                         </p>
@@ -115,7 +115,7 @@
                                     <!-- Column 4 content -->
                                     <div class=" mr-2">
                                         <h3 class="text-xl font-medium ">Marketing</h3>
-                                        <p class="hidden sm:contents font-medium ">
+                                        <p class="lg:contents sm:hidden font-medium ">
                                             Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                            
                                         </p>
@@ -133,7 +133,7 @@
                                     <!-- Column 5 content -->
                                     <div class=" mr-2">
                                         <h3 class="text-xl font-medium ">Marketing</h3>
-                                        <p class="hidden sm:contents font-medium ">
+                                        <p class="lg:contents sm:hidden font-medium ">
                                             Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
                                            
                                         </p>

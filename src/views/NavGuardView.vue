@@ -33,8 +33,8 @@
               <p class="border-2 border-slate-100 mx-5">
                  {{ project.projectName }}
               </p>
-              <p>
-                <input type="text" placeholder="New project name" v-model="project.projectName" />
+              <p class="bg-red-400">
+                <input  type="text" placeholder="New project name" v-model="project.projectName" />
               </p>
         
               <p>
