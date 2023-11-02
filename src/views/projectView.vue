@@ -1,59 +1,80 @@
 
 <template>
-  <div class="category-box pt-2 mb-4">
-    <button
-      type="button mx-2"
-      class="all"
-      @click="changeCategory('All')"
-    >
-      Se Alle
-    </button>
-    <button
-      type="button"
-      class="category-button mx-2"
-      @click="changeCategory('WebDesign')"
-      value="WebDesign"
-    >
-      WebDesign
-    </button>
-    <button
-      type="button"
-      class="category-button mx-2"
-      @click="changeCategory('MultiMedie')"
-      value="MultiMedie"
-    >
-      MultiMedie
-    </button>
+  <section>
+    <div class="container flex justify-center mx-auto">
+        <div class="w-[95%] py-20 grid grid-cols-1 md:grid-cols-2 gap-3 ">
+            <div class="">
+                <h5>Projekter</h5>
+                <div>
+                <h1 class="text-5xl md:text-7xl">Design <br> er nice   </h1> 
+                </div>
+            </div>
+            <div class="flex self-end ">
+                <p class="">
+                    det kan være svært dfsfd sdfsdfds 
+                </p>
+            </div>
+        </div>
+    </div>
+ </section>
 
-    <button
-      type="button"
-      class="category-button mx-2"
-      @click="changeCategory('GrafiskDesign')"
-      value="GrafiskDesign"
-    >
-      GrafiskDesign 
-    </button>
+  <section class="container mx-auto w-[95%]">
+    <div class=" category-box pt-2 mb-4">
+      <button
+        type="button mx-2"
+        class="all"
+        @click="changeCategory('All')"
+      >
+        Se Alle
+      </button>
+      <button
+        type="button"
+        class="category-button mx-2"
+        @click="changeCategory('WebDesign')"
+        value="WebDesign"
+      >
+        WebDesign
+      </button>
+      <button
+        type="button"
+        class="category-button mx-2"
+        @click="changeCategory('MultiMedie')"
+        value="MultiMedie"
+      >
+        MultiMedie
+      </button>
 
-    <button
-      type="button"
-      class="category-button mx-2"
-      @click="changeCategory('UI/UX')"
-      value="UI/UX"
-    >
-      UI/UX
-    </button>
+      <button
+        type="button"
+        class="category-button mx-2"
+        @click="changeCategory('GrafiskDesign')"
+        value="GrafiskDesign"
+      >
+        GrafiskDesign 
+      </button>
 
-    <button
-      type="button"
-      class="category-button mx-2"
-      @click="changeCategory('Markedføring')"
-      value="Markedføring"
-    >
-      Markedføring
-    </button>
-   
+      <button
+        type="button"
+        class="category-button mx-2"
+        @click="changeCategory('UI/UX')"
+        value="UI/UX"
+      >
+        UI/UX
+      </button>
+
+      <button
+        type="button"
+        class="category-button mx-2"
+        @click="changeCategory('Markedføring')"
+        value="Markedføring"
+      >
+        Markedføring
+      </button>
     
-  </div>
+      
+    </div>
+  </section>
+  
 
   <section class="container mx-auto w-[95%]  ">
     <!-- filteredProjects to filter-->

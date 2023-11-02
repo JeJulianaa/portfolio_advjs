@@ -1,5 +1,6 @@
 <template class="">
   <div v-if="projectDetailView" class="container projectDetailView ">
+       <button @click="goBack()">Back</button>
 
     <div class="grid grid-cols-2  ">
 
@@ -14,8 +15,8 @@
       <div class="col2 bg-slate-300  rounded-md ">
         <ul>
           <li class=" font-medium  ">
-            <span >Team:</span>
-             {{ projectDetailView.projectCategory.join(', ') }}
+            <span ></span>
+             {{ projectDetailView.projectCategory.join('  |  ') }}
           </li>
           <div class="child1 p-10">
             
@@ -27,7 +28,7 @@
 
           <div class="child2 grid grid-cols-3 pt-2 justify-items-center ">
             <button class="pr-3"><li class="bg-red-300 p-2"> {{ projectDetailView.onedriveLink }}</li></button>
-            <button class="pr-3"><li class="bg-red-300 p-2"> {{ projectDetailView.githubLink }}</li></button>
+            <button class="pr-3"><li class="bg-red-300 p-2"> <a href="projectDetailView.GithubLink">Link to Github</a></li></button>
             <button class="pr-3"><li class="bg-red-300 p-2"> {{ projectDetailView.youtubeLink }}</li></button>
           </div>
         </ul>
@@ -51,6 +52,10 @@
 import useProjects from '../modules/useProjects.js';
 import { onMounted,  computed } from 'vue';
 import { useRouter } from 'vue-router';
+
+const goBack = ( ) => {
+    router.go(-1)
+}
 
 const router = useRouter()
 

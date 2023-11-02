@@ -13,7 +13,7 @@
                 <section class="container mx-auto">
                     <div class="cover max-w-none bg-opacity-50 rounded-md relative ">
                         <div class="text-container absolute top-0 left-0 w-full h-full flex xl:items-center pl-[1rem] pb-[17rem] pt-[9rem] md:pb-[10rem] md:pt-[17rem] lg:pb-[0rem] lg:pl-8  lg:pt-[19rem] xl:pt-[0rem] xl:pb-[2rem]">
-                            <h1 class="text-white text-5xl md:text-6xl lg:text-8xl  xl:text-8xl">Alberte Juliana</h1>
+                            <h1 class="text-white text-5xl sm:text-4xl md:text-6xl lg:text-8xl  xl:text-8xl">Alberte Juliana</h1>
                             
                         </div>
                         <div class="text-container absolute top-0 left-0 w-full h-full flex items-center pl-[1rem] pt-[5.8rem] pb-[7rem] md:pb-[0] md:pt-[2rem] lg:pb-[7rem] lg:pl-[2rem] lg:pt-[20rem] xl:pb-[13rem] xl:pl-[22rem] xl:pt-[22rem]">
