@@ -60,14 +60,14 @@
     <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-3 max-w-none pb-3">
       <div class="w-full " v-for="project in filteredProjects" :key="project.id">
         <!-- loop through your projects and create links to their respective detail pages -->
-        <div>
-          <button class="button-yellow  rounded-lg " >
+        <div class="h-full w-full">
+          <button class="button-yellow h-full rounded-lg " >
             <router-link :to="{ name: 'projectdetail', params: { id: project.id }}">
-              <div class="  h-full w-full  shrink">
+              <div class="  h-full w-full shrink">
                              
-                <div v-if="project.projectImg">
+                <div  v-if="project.projectImg">
                   <img
-                    class="object-cover rounded-md bg-clip-padding border-gray-100"
+                    class="object-cover h-[20rem] rounded-md bg-clip-padding border-gray-100"
                     id="projectImage"
                     :src="project.projectImg"
                     alt="Project Image"
