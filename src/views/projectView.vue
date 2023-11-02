@@ -2,16 +2,18 @@
 <template>
   <section>
     <div class="container flex justify-center mx-auto">
-        <div class="w-[95%] py-20 grid grid-cols-1 md:grid-cols-2 gap-3 ">
+        <div class="w-[95%] py-10 grid grid-cols-1 md:grid-cols-2 gap-3 ">
             <div class="">
                 <h5>Projekter</h5>
                 <div>
-                <h1 class="text-5xl md:text-7xl">Design <br> er nice   </h1> 
+                <h1 class="text-5xl md:text-7xl">Design er<br>fundamentet for at bygge et stærkt brand  </h1> 
                 </div>
             </div>
-            <div class="flex self-end ">
-                <p class="">
-                    det kan være svært dfsfd sdfsdfds 
+            <div class="flex justify-end self-end ">
+                <p class="w-[70%]">
+                    Alle mine projekter gør jeg altid ind med 120%. Jeg brænder for at få 
+                    brand ud over kanterne så det står skarpt, stærk og 
+                    med den røde tråde hele vejen igennem.
                 </p>
             </div>
         </div>
