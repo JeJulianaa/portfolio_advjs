@@ -64,17 +64,18 @@
           <button class="button-yellow  rounded-lg " >
             <router-link :to="{ name: 'projectdetail', params: { id: project.id }}">
               <div class="  h-full w-full  shrink">
-                              <img class="object-cover w-full h-full rounded-md opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+                             
+                <div v-if="project.projectImg">
+                  <img
+                    class="object-cover rounded-md bg-clip-padding border-gray-100"
+                    id="projectImage"
+                    :src="project.projectImg"
+                    alt="Project Image"
+                    @error="handleImageError"
+                  >
+                </div> 
               </div>
-              <!-- <div v-if="project.projectImg">
-                <img
-                  class="w-20 h-20 object-cover rounded-md bg-clip-padding border-gray-100"
-                  id="projectImage"
-                  :src="project.projectImg"
-                  alt="Project Image"
-                  @error="handleImageError"
-                >
-              </div> -->
+              
               
               
               

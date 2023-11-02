@@ -96,7 +96,7 @@ const useProjects = () => {
       githubLink: project.githubLink,
       onedriveLink: project.onedriveLink,
       youtubeLink: project.youtubeLink,
-      projectImg: project.value.find(project => project.id === project.id).projectImg
+      projectImg: AddProjectData.value.projectImg // .value.find(project => project.id === project.id)
      
     }).then(() => {
 

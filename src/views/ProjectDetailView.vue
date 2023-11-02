@@ -4,12 +4,12 @@
     <div class="grid grid-cols-2  ">
 
       <!------------col 1 img------->
-      <!-- <div class="col1 pr-3" v-if="project.projectImg">
+      <div class="col1 pr-3" v-if="projectDetailView.projectImg">
         <div>
-          <img class="h-20 w-20" id="projectImage" :src="project.projectImg" alt="Project Image" >
+          <img class="object-cover" id="projectImage" :src="projectDetailView.projectImg" alt="Project Image" >
          
         </div>
-      </div> -->
+      </div> 
       <!--------col 2 name, desciption links------>
       <div class="col2 bg-slate-300  rounded-md ">
         <ul>
