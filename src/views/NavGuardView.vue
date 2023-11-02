@@ -2,7 +2,7 @@
   
 
   
-    <div class="container mx-auto  project-page mb-20 px-40 ">
+    <div class="container mx-auto  project-page mb-20  md:px-0 sm:px-40 ">
       <h2 class="text-lg flex justify-end pb-3">Add new project here</h2>
       <section class="add-new-project flex justify-end">
         
@@ -15,7 +15,7 @@
       <h2 class="text-lg pb-1">Dine Projekter</h2>
       <hr>
       
-      <section class="container mx-auto h-full w-[90%]">
+      <section class="container mx-auto h-full md:w-[100%] sm:w-[90%]">
       
           
         <div class=" modal-content mt-5 " v-for="project in projects" :key="project.id">
@@ -62,7 +62,7 @@
                 <section class="category-section mt-1 bg-gray-200 py-3 ">
                  
                   <h2 class="pb-2 px-3 pt-1 ">selected Categories: {{ project.projectCategory.join(', ') }}</h2> 
-                    <div class="text-left px-3 pb-2   grid grid-cols-2">
+                    <div class="text-left px-3 pb-2   grid grid-cols-2 gap-10 ">
                       
                       <div>
                         <p>
@@ -146,7 +146,7 @@
                     <input type="file" @change="uploadImg" accept="image/*">
                   </div>
                 
-                  <div class="h-1/2 w-1/2 py-3">
+                  <div class=" h-full w-full  p-12  py-3">
                     <img class="object-cover rounded-md " v-if="project.projectImg" :src="project.projectImg" alt="Project Image" />
                   </div>
                 </div>

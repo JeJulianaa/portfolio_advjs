@@ -111,7 +111,7 @@ const useProjects = () => {
       UpdateProjectData.value.githubLink = '';
       UpdateProjectData.value.onedriveLink = '';
       UpdateProjectData.value.youtubeLink = '';
-      
+      UpdateProjectData.value.projectImg = '';
    
     });
   };
@@ -121,6 +121,7 @@ const useProjects = () => {
  const storage = getStorage();
  
  // Firebase storage upload image + get download URL + enable button after image uploaded
+ //async function
  const uploadImg = async(event) => {
    let file = event.target.files[0]; // get the file
    console.log("file", file)

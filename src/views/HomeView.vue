@@ -20,7 +20,7 @@
                             <h2 class="text-white text-5xl md:text-6xl lg:text-8xl xl:text-8xl ">Torbensen</h2>
                         </div>
                         <div class="text-container absolute top-0 left-0 w-full h-full flex items-center grid grid-cols-1  md:grid-cols-2">
-                            <p class="text-white text-md pt-[18.1rem] pl-[1rem]  lg:pl-[3rem] lg:pt-[23rem] xl:pl-[23rem] pt-[12rem] md:pt-[16rem]">Multi Medie Designer med pafdjfk fsdjfksj  efdsf <br> sfdkfsdkfdsfdf dsfsdfs dfdg</p>
+                            <p class="text-white text-md pt-[18.1rem] pl-[1rem]  lg:pl-[3rem] lg:pt-[23rem] xl:pl-[23rem] pt-[12rem] md:pt-[16rem]">Som multimediedesigner og bringer jeg et nyt perspektiv til hvert projekt. </p>
 
                             <button class="text-container  text-lg pt-[3rem] pb-[7rem]  pl-[0rem] md:pl-[3rem] md:pb-[0rem] md:pt-[16rem]  lg:pl-[16rem] lg:pt-[23rem]  xl:pl-[23rem]    ">  <RouterLink to="/project-page">Se Projekter</RouterLink> </button>
                         </div>
@@ -83,7 +83,7 @@
 
                 <!--2cols - Sevies and Img--->
                 <section class="container w-full">
-                    <p class="  text-center pb-7 pt-14">Min Færdigheder</p>
+                    <p class="  text-center pb-7 pt-14">Mine Kompentencer</p>
                     <div class=" flex grid grid-cols-1 sm:grid-cols-2 w-full items-center">
                         <div class="col1  md:mr-3 flex-grow flex-shrink ">
 
@@ -92,16 +92,16 @@
                                 <div class="w-full grow shrink">
                                     <!-- Column 1 content -->
                                     <div class=" mr-2">
-                                        <h3 class="text-xl font-medium ">Marketing</h3>
+                                        <h3 class="text-xl font-medium ">MEDIE OG GRAFISK DESIGN</h3>
                                         <p class="lg:contents hidden font-medium ">
-                                            Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
+                                            Både video/billede redigering, illustrationer, magasin og meget mere
                                            
                                         </p>
                                     </div>
                                 </div>
                                 <!--button-->
                                 <div class=" w-1/4 flex justify-end  flex items-center justify-center h-full py-4 ">
-                                    <button class=" h-[3rem] w-[10rem] button-standard">knap</button>
+                                    <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/services">Læs Mere</RouterLink></button>
                                 </div>
                             </div>
 
@@ -111,15 +111,15 @@
                                 <div class="w-full grow shrink">
                                     <!-- Column 2 content -->
                                     <div class=" mr-2">
-                                        <h3 class="text-xl font-medium ">Marketing</h3>
+                                        <h3 class="text-xl font-medium ">BRAND OG MARKEDFØRING</h3>
                                         <p class="lg:contents hidden font-medium ">
-                                            Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
+                                            En solid markedføring-strategi, SoMe kalender så dit brand bliver set.
                                          
                                         </p>
                                     </div>
                                 </div>
                                 <div class=" w-1/4 flex justify-end  flex items-center justify-center h-full py-4 ">
-                                    <button class=" h-[3rem] w-[10rem] button-standard">knap</button>
+                                    <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/services">Læs Mere</RouterLink></button>
                                 </div>
                             </div>
                             
@@ -128,16 +128,16 @@
                                 <div class="w-full grow shrink">
                                     <!-- Column 3 content -->
                                     <div class=" mr-2">
-                                        <h3 class="text-xl font-medium ">Marketing</h3>
+                                        <h3 class="text-xl font-medium ">BRUGER VENLIGHED</h3>
                                         <p class="lg:contents hidden font-medium ">
-                                            Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
+                                           Altid være et skridt foran end dine bruger.
                                            
                                         </p>
                                     </div>
                                 </div>
                                 <!--button-->
                                 <div class=" w-1/4 flex justify-end  flex items-center justify-center h-full py-4 ">
-                                    <button class=" h-[3rem] w-[10rem] button-standard">knap</button>
+                                    <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/services">Læs Mere</RouterLink></button>
                                 </div>
                             </div>
 
@@ -146,16 +146,16 @@
                                 <div class="w-full grow shrink">
                                     <!-- Column 4 content -->
                                     <div class=" mr-2">
-                                        <h3 class="text-xl font-medium ">Marketing</h3>
+                                        <h3 class="text-xl font-medium ">PLANLÆGNING OG STRYKTUR</h3>
                                         <p class="lg:contents hidden font-medium ">
-                                            Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
+                                            en målrettet plan, er vejen frem til et sucessful brand.
                                            
                                         </p>
                                     </div>
                                 </div>
                                 <!--button-->
                                 <div class=" w-1/4 flex justify-end  flex items-center justify-center h-full py-4 ">
-                                    <button class=" h-[3rem] w-[10rem] button-standard">knap</button>
+                                    <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/services">Læs Mere</RouterLink></button>
                                 </div>
                             </div>
 
@@ -164,9 +164,9 @@
                                 <div class="w-full grow shrink">
                                     <!-- Column 5 content -->
                                     <div class=" mr-2">
-                                        <h3 class="text-xl font-medium ">Marketing</h3>
+                                        <h3 class="text-xl font-medium ">FUNKTIONEL WEBSITE</h3>
                                         <p class="lg:contents hidden font-medium ">
-                                            Marketing textfdsf gfdjgkfd sdkelfksd fslkf slf slkf slk
+                                           stilful design, responsive til både smartphone eller pc bruger.
                                            
                                         </p>
                                     </div>

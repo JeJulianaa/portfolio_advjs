@@ -1,18 +1,18 @@
 <template class="">
-  <div v-if="projectDetailView" class="container projectDetailView ">
+  <div v-if="projectDetailView" class="container mx-auto max-w-none projectDetailView ">
        <button @click="goBack()">Back</button>
 
     <div class="grid grid-cols-2  ">
 
       <!------------col 1 img------->
-      <div class="col1 pr-3" v-if="projectDetailView.projectImg">
-        <div>
-          <img class="object-cover" id="projectImage" :src="projectDetailView.projectImg" alt="Project Image" >
+      <div class="col1 pr-3 " v-if="projectDetailView.projectImg">
+        <div class="h-full w-full shrink">
+          <img class="object-cover h-full " id="projectImage" :src="projectDetailView.projectImg" alt="Project Image" >
          
         </div>
       </div> 
       <!--------col 2 name, desciption links------>
-      <div class="col2 bg-slate-300  rounded-md ">
+      <div class="col2 bg-slate-300 w-full rounded-md ">
         <ul>
           <li class=" font-medium  ">
             <span ></span>
