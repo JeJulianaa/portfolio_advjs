@@ -26,7 +26,7 @@
             <li  class="pb-10 "><span class="font-medium text-xs">Beskrivelse:</span> <br> {{ projectDetailView.projectDescription }}</li>
           </div>
 
-          <div class="child2 grid grid-cols-3 pt-2 justify-items-center ">
+          <div class="child2 grid grid-cols-3 pt-2 justify-center self-end ">
             <button class="pr-3"><li class=" p-2"> <a href="projectDetailView.Onedrive">Link til onedrive</a> </li></button>
             <button class="pr-3"><li class=" p-2" > <a href="projectDetailView.GithubLink">Link til Github</a></li></button>
             <button class="pr-3 " ><li class=" p-2"  >  <a  href="projectDetailView.YoutubeLink">Link til Youtube</a></li></button>

@@ -39,7 +39,7 @@
                         <div class="flex justify-center w-full " v-for="(project, index) in filteredProjects" :key="project.id">
                             <!-- loop through your projects and create links to their respective detail pages -->
                             <div class="" v-if="index < 3">
-                                <button class="  w-full h-full rounded-lg " >
+                                <button class="  w-full h-full rounded-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 hover:duration-300 " >
                                     <router-link :to="{ name: 'projectdetail', params: { id: project.id }}">
                                     <div class="  h-full w-full h-full shrink">
                                                     
