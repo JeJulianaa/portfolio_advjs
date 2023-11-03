@@ -34,7 +34,7 @@
                         Med mine færdigheder og 
                          en dedikation til at holde sig op to-date
                         med de nyeste trends.</p>
-                        <button class=" h-[3rem] w-[10rem] bg-zinc-100 rounded-md"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
+                        <button class="projekt-btn h-[3rem] w-[10rem] bg-zinc-100 rounded-md"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
                 </div>
                     
             </div>
@@ -60,7 +60,7 @@
                         Med færdigheder inden for UX/UI, content creation,
                         web development og en dedikation til at holde sig op to-date
                         med de nyeste trends.</p>
-                        <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
+                        <button class=" projekt-btn h-[3rem] w-[10rem] button-standard"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
                 </div>
                     
             </div>
@@ -80,7 +80,7 @@
                         Med færdigheder inden for UX/UI, content creation,
                         web development og en dedikation til at holde sig op to-date
                         med de nyeste trends.</p>
-                        <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
+                        <button class="projekt-btn h-[3rem] w-[10rem] button-standard"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
                 </div>
                     
             </div>
@@ -106,7 +106,7 @@
                         Med færdigheder inden for UX/UI, content creation,
                         web development og en dedikation til at holde sig op to-date
                         med de nyeste trends.</p>
-                        <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
+                        <button class="projekt-btn h-[3rem] w-[10rem] button-standard"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
                 </div>
                     
             </div>
@@ -125,7 +125,7 @@
                         Med færdigheder inden for UX/UI, content creation,
                         web development og en dedikation til at holde sig op to-date
                         med de nyeste trends.</p>
-                        <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
+                        <button class="projekt-btn h-[3rem] w-[10rem] button-standard"><RouterLink to="/project-page">Se Projekter</RouterLink></button>
                 </div>
                     
             </div>

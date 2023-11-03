@@ -158,7 +158,7 @@
                 
                   
                 <div class="flex justify-end">
-                  <button class=" btn-edit button-standard mx-4 bg-green-500" @click="firebaseUpdateSingleItem(project); closeEditModal()">Save</button>
+                  <button class=" btn-edit button-save mx-4 " @click="firebaseUpdateSingleItem(project); closeEditModal()">Save</button>
                 </div>
                     
                 
@@ -169,7 +169,7 @@
           
           <div v-if="!isEditModalOpen">
             <button v-if="!isEditModalOpen" class="mr-2 btn-edit button-standard " @click="openEditModal(project.id)">Edit item</button>
-              <button  class="btnDelete  button-standard bg-red-500" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
+              <button  class="btnDelete  button-delete bg-red-500" @click="firebaseDeleteSingleItem(project.id)">Delete item</button>
           
           </div>
       </div>

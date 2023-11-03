@@ -19,7 +19,7 @@
         <div class="flex justify-center " >
           
           
-            <button class="login button-standard "  @click="logIn">Login</button>
+            <button class="login projekt-btn "  @click="logIn">Login</button>
             <button class="logout " v-if="userAuthenticated" @click="logOut">Logout</button>
           
         </div>

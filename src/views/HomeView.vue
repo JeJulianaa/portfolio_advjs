@@ -21,8 +21,9 @@
                         </div>
                         <div class="text-container absolute top-0 left-0 w-full h-full flex items-center grid grid-cols-1  md:grid-cols-2">
                             <p class="text-white text-md pt-[18.1rem] pl-[1rem]  lg:pl-[3rem] lg:pt-[23rem] xl:pl-[23rem] pt-[12rem] md:pt-[16rem]">Som multimediedesigner og bringer jeg et nyt perspektiv til hvert projekt. </p>
-
-                            <button class="text-container  text-lg pt-[3rem] pb-[7rem]  pl-[0rem] md:pl-[3rem] md:pb-[0rem] md:pt-[16rem]  lg:pl-[16rem] lg:pt-[23rem]  xl:pl-[23rem]    ">  <RouterLink to="/project-page">Se Projekter</RouterLink> </button>
+                            <div class="pt-[3rem] pb-[7rem]  pl-[0rem] md:pl-[3rem] md:pb-[0rem] md:pt-[16rem]  lg:pl-[16rem] lg:pt-[23rem]  xl:pl-[22rem]">
+                                <button class="projekt-btn text-container font-semibold text-xl    ">  <RouterLink to="/project-page">Se Projekter</RouterLink> </button>
+                            </div>
                         </div>
                         
                         
@@ -33,7 +34,7 @@
                 
                 <!--lastest Project (the 3 Img)-->
                 <section >
-                    <h3 class="text-center pb-7 pt-7">latest Project</h3>
+                    <h3 class="text-center pb-7 pt-7">Projekter </h3>
                     <div class="container mx-auto grid grid-cols-1 sm:grid-cols-3 gap-2  max-w-none h-2/4 ">
                         <div class="flex justify-center w-full " v-for="(project, index) in filteredProjects" :key="project.id">
                             <!-- loop through your projects and create links to their respective detail pages -->
@@ -101,7 +102,7 @@
                                 </div>
                                 <!--button-->
                                 <div class=" w-1/4 flex justify-end  flex items-center justify-center h-full py-4 ">
-                                    <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/services">Læs Mere</RouterLink></button>
+                                    <button class=" h-[3rem] w-[10rem] button-read-more"><RouterLink to="/services">Læs Mere</RouterLink></button>
                                 </div>
                             </div>
 
@@ -119,7 +120,7 @@
                                     </div>
                                 </div>
                                 <div class=" w-1/4 flex justify-end  flex items-center justify-center h-full py-4 ">
-                                    <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/services">Læs Mere</RouterLink></button>
+                                    <button class=" h-[3rem] w-[10rem] button-read-more"><RouterLink to="/services">Læs Mere</RouterLink></button>
                                 </div>
                             </div>
                             
@@ -137,7 +138,7 @@
                                 </div>
                                 <!--button-->
                                 <div class=" w-1/4 flex justify-end  flex items-center justify-center h-full py-4 ">
-                                    <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/services">Læs Mere</RouterLink></button>
+                                    <button class=" h-[3rem] w-[10rem] button-read-more"><RouterLink to="/services">Læs Mere</RouterLink></button>
                                 </div>
                             </div>
 
@@ -155,7 +156,7 @@
                                 </div>
                                 <!--button-->
                                 <div class=" w-1/4 flex justify-end  flex items-center justify-center h-full py-4 ">
-                                    <button class=" h-[3rem] w-[10rem] button-standard"><RouterLink to="/services">Læs Mere</RouterLink></button>
+                                    <button class=" h-[3rem] w-[10rem] button-read-more"><RouterLink to="/services">Læs Mere</RouterLink></button>
                                 </div>
                             </div>
 
@@ -173,7 +174,7 @@
                                 </div>
                                 <!--button-->
                                 <div class=" w-1/4 flex justify-end  flex items-center justify-center h-full py-4 ">
-                                    <button class=" h-[3rem] w-[10rem] button-standard">knap</button>
+                                    <button class=" h-[3rem] w-[10rem] button-read-more"><RouterLink to="/services">Læs Mere</RouterLink></button>
                                 </div>
                             </div>
                         </div>
@@ -186,22 +187,31 @@
                 </section>
                 <!---About me --->
                 <section >
-                    <h3 class="text-center pb-7 pt-7">branding blah blah</h3>
+                    <h3 class="text-center pb-7 pt-7">dedikeret, målorienteret, glad, Jordnær og kreativ</h3>
                     <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2  max-w-none pb-40">
                         <div class="bg-neutral-300 rounded-md flex justify-center md:mr-3 shrink ">
-                            <div class=" w-full  rounded-md opacity-50 border-gray-100 p-10 lg:pr-26" >
+                            <div class=" w-full  rounded-md  border-gray-100 p-10 lg:pr-26" >
+                            
                                 <h2 class="text-5xl lg:text-7xl pb-10 ">Hvem er jeg?</h2>
-                                <p class="pb-14">Som multimediedesigner og content creator 
-                                    bringer jeg et nyt perspektiv til hvert projekt.
-                                    Med færdigheder inden for UX/UI, content creation,
-                                    web development og en dedikation til at holde sig op to-date
-                                    med de nyeste trends.</p>
-                                    <button class=" h-[3rem] w-[10rem] button-standard">knap</button>
+                                
+                                <p class="pb-14">
+                                Hej! mit navn er Alberte Juliana Torbensen jeg er 23 år og er bosat i Esbjerg.
+                                 Jeg brænder for at skabe content, om det er marketingstrategi, webdesign,
+                                  grafisk design eller billeder og video - så er jeg klar på det hele! <br>
+                                  <br>
+                                Jeg har altid haft en indre multimediedesigner i mig.
+                                 Allerede som 13-14-årig fik jeg mit første rigtige kamera
+                                  og begyndte at nørde med Adobe-programmerne. Som person er 
+                                  jeg jordnær og glad, og jeg ser altid positivt på tingene.
+                                   Jeg går ind i alle projekter med en passion på 120%,
+                                    så et projekt bliver aldrig kedeligt for mig. Jeg synes,
+                                     det er sjovt og spændende at blive udfordret og lære ny viden.</p>
+                                    
                             </div>
                                 
                         </div>
                         <div class=" mt-4 sm:mt-0 h-full w-full  shrink">
-                            <img class="object-cover w-full h-full rounded-md opacity-50 border-gray-100" src="../assets/img/Cup_noodles.jpg" alt="">
+                            <img class="object-cover w-full h-full rounded-md  border-gray-100" src="../assets/img/billedeafmig.jpg" alt="">
                         </div>
                         
                     </div>

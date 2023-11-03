@@ -17,24 +17,98 @@
 a,
 .green {
   text-decoration: none;
-  color: rgb(233, 108, 20);
+ 
   transition: 0.4s;
 }
 
 
 
 .button-standard{
-  padding: 5px 12px 5px 12px;
-  border: solid 3px;
+  padding: 7px 12px 7px 12px;
+  /* border: solid 3px; */
   border-radius: 8px;
+  background-color: rgba(241, 243, 244, 0.939);
+}
+.button-standard:hover{
+  padding: 7px 12px 7px 12px;
+  /* border: solid 3px; */
+  transition: all 0.4s ease-in-out;
+  border-radius: 8px;
+  background-color: rgba(140, 140, 140, 0.406);
+}
+
+.button-read-more{
+  padding: 7px 12px 7px 12px;
+  /* border: solid 3px; */
+  text-decoration: none;
+  color: rgb(233, 108, 20);
+  
+}
+.button-read-more:hover{
+  padding: 7px 12px 7px 12px;
+  transition: all 0.3s ease-in-out;
+  color: rgb(118, 59, 59);
 }
 
 
 
 
+.projekt-btn 
+{
+  color: rgb(233, 108, 20);
+  padding: 7px 12px 7px 12px;
+  /* border: solid 3px; */
+  border-radius: 8px;
+  background-color: rgba(241, 243, 244, 0.939);
+}
+
+.projekt-btn:hover{
+  color: rgb(233, 108, 20);
+  padding: 7px 12px 7px 12px;
+  /* border: solid 3px; */
+  border-radius: 8px;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(230, 229, 229, 0.505);
+}
+.button-save
+{
+  color: rgb(238, 238, 238);
+  padding: 7px 12px 7px 12px;
+  /* border: solid 3px; */
+  border-radius: 8px;
+  background-color: rgba(37, 195, 71, 0.939);
+}
+
+.button-save:hover{
+  color: rgb(224, 224, 224);
+  padding: 7px 12px 7px 12px;
+  /* border: solid 3px; */
+  border-radius: 8px;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(39, 146, 62, 0.939);
+}
+
+.button-delete
+{
+  color: rgb(238, 238, 238);
+  padding: 7px 12px 7px 12px;
+  /* border: solid 3px; */
+  border-radius: 8px;
+  background-color: rgba(228, 57, 57, 0.939);
+}
+
+.button-delete:hover{
+  color: rgb(239, 239, 239);
+  padding: 7px 12px 7px 12px;
+  /* border: solid 3px; */
+  border-radius: 8px;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(228, 57, 57, 0.669);
+}
+
 @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+  nav a:hover {
+    background-color: hsla(0, 0%, 33%, 0.2);
   }
 }
 

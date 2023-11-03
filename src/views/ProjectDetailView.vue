@@ -7,7 +7,7 @@
       <!------------col 1 img------->
       <div class="col1 pr-3 " v-if="projectDetailView.projectImg">
         <div class="h-full w-full shrink">
-          <img class="object-cover h-full " id="projectImage" :src="projectDetailView.projectImg" alt="Project Image" >
+          <img class="object-cover h-full  " id="projectImage" :src="projectDetailView.projectImg" alt="Project Image" >
          
         </div>
       </div> 
@@ -28,8 +28,8 @@
 
           <div class="child2 grid grid-cols-3 pt-2 justify-items-center ">
             <button class="pr-3"><li class="bg-red-300 p-2"> {{ projectDetailView.onedriveLink }}</li></button>
-            <button class="pr-3"><li class="bg-red-300 p-2"> <a href="projectDetailView.GithubLink">Link to Github</a></li></button>
-            <button class="pr-3"><li class="bg-red-300 p-2"> {{ projectDetailView.youtubeLink }}</li></button>
+            <button class="pr-3"><li class="bg-red-300 p-2"> <a href="projectDetailView.GithubLink">Link til Github</a></li></button>
+            <button class="pr-3"><li class="bg-red-300 p-2">  <a href="projectDetailView.YoutubeLink">Link til Youtube</a></li></button>
           </div>
         </ul>
       </div>

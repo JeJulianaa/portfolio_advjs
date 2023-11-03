@@ -80,8 +80,8 @@
 
   <section class="container mx-auto w-[95%]  ">
     <!-- filteredProjects to filter-->
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-3 max-w-none pb-3">
-      <div class="w-full " v-for="project in filteredProjects" :key="project.id">
+    <div class="container mx-auto  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-3 max-w-none pb-3">
+      <div class="w-full projecktview-button transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 hover:duration-300 " v-for="project in filteredProjects" :key="project.id">
         <!-- loop through your projects and create links to their respective detail pages -->
         <div class="h-full w-full">
           <button class="button-yellow h-full rounded-lg " >
@@ -144,3 +144,16 @@ onMounted(async () => {
    getProjectsData();
 });
 </script>
+
+<style>
+
+
+.category-button:hover{
+  background-color: rgba(36, 36, 36, 0.155);
+  transition: all 0.4s ease-in-out;
+}
+
+
+
+
+</style>
