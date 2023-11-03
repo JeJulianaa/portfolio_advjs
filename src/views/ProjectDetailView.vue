@@ -2,41 +2,41 @@
   <div v-if="projectDetailView" class="container mx-auto max-w-none projectDetailView ">
        <button @click="goBack()">Back</button>
 
-    <div class="grid grid-cols-2  ">
+    <div class="grid grid-cols-1 gap-3 md:grid-cols-2  ">
 
       <!------------col 1 img------->
-      <div class="col1 pr-3 " v-if="projectDetailView.projectImg">
+      <div class="col1 " v-if="projectDetailView.projectImg">
         <div class="h-full w-full shrink">
           <img class="object-cover h-full  " id="projectImage" :src="projectDetailView.projectImg" alt="Project Image" >
          
         </div>
       </div> 
       <!--------col 2 name, desciption links------>
-      <div class="col2 bg-slate-300 w-full rounded-md ">
+      <div class="col2 bg-neutral-300 w-full rounded-md ">
         <ul>
-          <li class=" font-medium  ">
+          <li class=" font-medium text-xs flex justify-end p-2  ">
             <span ></span>
              {{ projectDetailView.projectCategory.join('  |  ') }}
           </li>
           <div class="child1 p-10">
             
-            <li  class="text-3xl font-medium  ">
+            <li  class="text-3xl font-medium pb-6 ">
               <span class=""></span> {{ projectDetailView.projectName }}
             </li>
-            <li  class="h-[28rem]"><span>Beskrivelse:</span> <br> {{ projectDetailView.projectDescription }}</li>
+            <li  class="pb-10 "><span class="font-medium text-xs">Beskrivelse:</span> <br> {{ projectDetailView.projectDescription }}</li>
           </div>
 
           <div class="child2 grid grid-cols-3 pt-2 justify-items-center ">
-            <button class="pr-3"><li class="bg-red-300 p-2"> {{ projectDetailView.onedriveLink }}</li></button>
-            <button class="pr-3"><li class="bg-red-300 p-2"> <a href="projectDetailView.GithubLink">Link til Github</a></li></button>
-            <button class="pr-3"><li class="bg-red-300 p-2">  <a href="projectDetailView.YoutubeLink">Link til Youtube</a></li></button>
+            <button class="pr-3"><li class=" p-2"> <a href="projectDetailView.Onedrive">Link til onedrive</a> </li></button>
+            <button class="pr-3"><li class=" p-2" > <a href="projectDetailView.GithubLink">Link til Github</a></li></button>
+            <button class="pr-3 " ><li class=" p-2"  >  <a  href="projectDetailView.YoutubeLink">Link til Youtube</a></li></button>
           </div>
         </ul>
       </div>
     </div>
 
 
-    <div class="grid grid-cols-2 justify-items-center ">
+    <div class="grid grid-cols-2 justify-items-center py-5 ">
       <ul class="">
         <li class=""><span>Team:</span> {{ projectDetailView.projectTeam }}</li>
      </ul>

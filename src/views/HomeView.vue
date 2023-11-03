@@ -33,19 +33,19 @@
                 </section>
                 
                 <!--lastest Project (the 3 Img)-->
-                <section >
+                <section class="">
                     <h3 class="text-center pb-7 pt-7">Projekter </h3>
-                    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-3 gap-2  max-w-none h-2/4 ">
+                    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-3 gap-2  max-w-none w-full h-2/4 ">
                         <div class="flex justify-center w-full " v-for="(project, index) in filteredProjects" :key="project.id">
                             <!-- loop through your projects and create links to their respective detail pages -->
                             <div class="" v-if="index < 3">
-                                <button class="button-yellow w-full h-full rounded-lg " >
+                                <button class="  w-full h-full rounded-lg " >
                                     <router-link :to="{ name: 'projectdetail', params: { id: project.id }}">
                                     <div class="  h-full w-full h-full shrink">
                                                     
                                         <div v-if="project.projectImg">
                                         <img
-                                            class="object-cover  h-56 rounded-md bg-clip-padding border-gray-100"
+                                            class="object-cover h-[12rem] w-[20rem] rounded-md bg-clip-padding border-gray-100"
                                             id="projectImage"
                                             :src="project.projectImg"
                                             alt="Project Image"

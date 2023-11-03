@@ -90,7 +90,7 @@
                              
                 <div  v-if="project.projectImg">
                   <img
-                    class="object-cover h-[20rem] rounded-md bg-clip-padding border-gray-100"
+                    class="object-cover h-[20rem] w-[90rem] rounded-md bg-clip-padding border-gray-100"
                     id="projectImage"
                     :src="project.projectImg"
                     alt="Project Image"
